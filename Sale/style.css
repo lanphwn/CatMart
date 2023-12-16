@@ -1,0 +1,575 @@
+body{
+    font-family: "Baloo Bhaina 2";
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+
+.head{
+    height: 20vh;
+    background-image: url("Image/Head.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top_bar{
+    background-color: #D35E31;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0px 11vw;
+}
+
+/* .right{
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+} */
+
+.top_bar .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap:10px
+}
+
+.top_bar .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top:5px ;
+}
+
+.left img {
+    width: 16px;
+    height: 16px;
+}
+
+
+.image_nav{
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#youtube{
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
+}
+.top_bar .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right img {
+    /* display: flex;
+    flex-direction: row; */
+    width: 14px;
+    height: 14px;
+    object-fit: scale-down;
+    padding: 0 5px 5px 50px
+}
+
+.right a{
+    padding-right: 30px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_bar p{
+    padding: 0;
+    padding-left: 6px;
+    font-size: 16px;
+    color: #FFF;
+    margin: 0;
+
+}
+
+.top_bar a{
+    text-decoration: none;
+    color: #FFF;
+    padding-left: 5px;
+}
+.sticky_scroll{
+    position: sticky;
+    top:0px;
+}
+
+.vi_tri{
+    margin: 0;
+    width: 100vw;
+    height: 3px;
+    display: flex;
+    justify-content: center;
+    height: 3px;
+    
+}
+
+#uu_dai{
+    border-bottom:3px solid #AC3C12;
+    /* border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; */
+}
+
+.header{
+    display: flex;
+    background-color: #FEDCD2;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20vw;
+}
+
+.header #logo{
+    display: inline;
+    height: 78px;
+    width: 98px;
+    padding: 5px 0px;
+}
+
+.search{
+    display:flex;
+    /* width: 1000px; */
+    height: 32px;
+    align-items: center;
+    /* flex-shrink: 2; */
+}
+
+.search .tim_kiem{
+    display: inline;
+    width: 27vw;
+    height: 30px;
+    align-items: center;
+    border: none;
+    padding-left: 10px;
+    flex-shrink:0 ;
+    border-radius: 2px 0px 0px 2px;
+}
+
+/* input::placeholder{
+    padding-left: 5px;
+} */
+
+.search .button_tim_kiem{
+    padding:0px 20px;
+    /* width: 5vw; */
+    height: 32px;
+    background-color: #DE744C;
+    position: relative;
+    border: none;
+    color: #FAFAFA;
+    margin-right: 10px;
+    border-radius: 0px 2px 2px 0px;
+
+}
+
+.gio_hang{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #CE3800;
+}
+.gio_hang img{
+    height: 24px;
+    width: 22px;
+}
+
+.gio_hang p{
+    /* height: 24px;
+    width: 22px; */
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.lien_he{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CE3800;
+}
+.lien_he img{
+    height: 29px;
+    width: 29px;
+}
+
+.lien_he p {
+    gap: 1px;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+#phone_num{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#hotline{
+    font-size: 12px;
+}
+
+.sdt{
+    padding-right: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dieu_huong{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+    list-style: none;
+    margin: 0;
+    border-bottom:3px solid #EAEAEA;
+}
+
+.dieu_huong li{
+    list-style: none;
+    padding: 0 30px;
+}
+
+.nav_bar a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #AC3C12;
+}
+
+.flash_sale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFECE7;
+    gap: 35vw;
+    height: 100px;
+    margin: 20px 0;
+}
+
+.flash_sale p:first-child{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 700;
+    background: linear-gradient(180deg, #E30000 -31.55%, #F7FA61 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    /* padding-right: 35vw; */
+}
+
+.flash_sale .clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #D35E31;
+    color: white;
+    color: #FFF;
+    font-family: "Baloo Bhaina 2";
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    padding: 8px 15px 0px 15px;
+    height: 60%;
+    line-height: normal;
+}
+
+.pro_sale{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.pro_sale button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:8.5px;
+    margin: 0;
+    line-height: 1;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #FA407B 0%, #FD8648 100%);
+    width: 208px;
+    height: 58px;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: "Baloo Bhaina 2";
+    font-size: 36px;
+    font-weight: 600;
+}
+.pro_sale button:hover{
+    box-shadow: 4px 4px 6.8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 146px;
+}
+
+.pro_name{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.pro_price{
+    font-size: 24px;
+    text-decoration:line-through;
+    margin: 0;
+    padding: 0;
+    line-height: 1.25;
+}
+
+.pro_price_new{
+    font-size: 52px;
+    font-weight: 700;    
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    line-height: 1.25;
+}
+
+.pro_img{
+    border-radius: 25px;
+    width: 708.289px;
+    height: 334px;
+    object-fit: cover;
+}
+
+.title{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    width: 800px;
+    height: 72px;
+    border-radius: 107px;
+    background: #EB8660;
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.voucher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro_voucher{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background: #FFECE7; */
+    padding: 30px ;
+    border-radius: 16px;
+    /* width: 50vw; */
+    gap: 25px;
+    background: #FFECE7;
+}
+
+.row{
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-direction: row;
+    /* background: #FFECE7; */
+
+}
+
+.pro_row{
+    border-radius: 15px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.row_img{
+    display: flex;
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.voucher button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    line-height: 1;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #FA407B 0%, #FD8648 100%);
+    width: 123px;
+    height: 32px;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: "Baloo Bhaina 2";
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 5.5px;
+}
+.voucher button:hover{
+    box-shadow: 4px 4px 6.8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.row_name{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.row_price_new{    
+    margin: 0;
+    padding: 0;
+    color: #FB6163;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.row_price{
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: line-through;
+    /* text-decoration-line: strikethrough; */
+    margin: 0;
+    padding: 0;
+}
+
+.looking{
+    height: 20vh;
+    background-image: url("Image/animal_looking.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #303030;
+    padding: 2vw 10vw;
+    /* width: 100vw; */
+}
+
+.footer p{
+    margin: 0;
+}
+
+.foot_left p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+}
+
+.foot_left p:first-child{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.policy{
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.policy a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.ho_tro{
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.ho_tro a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+}
+
+
+.foot_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #FFF;
+}
+
+.foot_right .image_nav{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: normal;
+}
+
+.foot_right .image_nav a{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.foot_right .image_nav a:first-child{
+    width: 13.5px;
+    height: 13.5px;
+    object-fit: cover;
+    padding-right: 20px;
+}
+.foot_right .image_nav a:last-child{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    padding: 0 20px;
+}

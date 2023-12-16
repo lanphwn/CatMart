@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Cat Mart</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="head">
+    </div>
+    <div class="top_bar">
+        <div class="left">
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube" id="youtube">
+                </a>
+            </div>
+            <p>Chào mừng đến với CatMart!!!</p>
+        </div>
+        <div class="right">
+            <!-- <a href="#profile">
+                <img src="Image/icon_progile.png">
+                Tài khoản
+            </a> -->
+            <a href="#profile">
+                <img src="Image/icon_progile.png">
+            </a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Tài khoản</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="login">Đăng nhập</a>
+
+                    <a id="reges" href="#">Đăng ký</a>
+                </div>
+            </div>
+            <!-- <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Tài khoản</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a id="login" href="#">Đăng nhập</a>
+                  <a id="reges" href="#">Đăng ký</a>
+                </div>
+              </div> -->
+            <a href="#location">
+                <img src="Image/location.png">
+                Hệ thống cửa hàng
+            </a>
+        </div>
+    </div>
+
+
+    <div class="sticky_scroll">
+        <div class="header">
+            <img id="logo" src="Image/logo.png">
+            <div class="search">
+                <input type="text" class="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
+                <button class="button_tim_kiem"> Tìm kiếm </button>
+                <!-- <span> Tìm kiếm</span> -->
+            </div>
+            <div class="gio_hang">
+                <div class="gio_hang_img">
+                    <img src="Image/shopping bag.png">
+                    <p>0</p>
+                </div>
+                <p>Giỏ hàng</p>
+            </div>
+            <div class="lien_he">
+                <div class="sdt">
+                    <p id="phone_num">0988888888</p>
+                    <p id="hotline">HOTLINE ĐẶT HÀNG</p>
+                </div>
+                <img src="Image/phone.png">
+            </div>
+        </div>
+        <div class="nav_bar">
+            <ul class="dieu_huong">
+                <li>
+                    <a href="#homepage" id="home_page"> Trang chủ </a>
+                </li>
+                <li>
+                    <a href="/Sale/index.html"> Ưu đãi </a>
+                </li>
+                <li>
+                    <a href="#Sanpham"> Sản phẩm </a>
+                </li>
+                <li>
+                    <a href="#Vechungtoi"> Về chúng tôi </a>
+                </li>
+                <li>
+                    <a href="#lienhe"> Liên hệ </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="Image/banner.jpg" alt="">
+    </div>
+
+    <h1> Sản phẩm bán chạy</h1>
+
+    <div class="best_pro">
+        <div class="pro1">
+            <img class="pro_img" src="Image/product_image1.jpg">
+            <p class="pro_name">Tên sản phẩm 1</p>
+            <p class="pro_price">200.000</p>
+            <div class="vote">
+                <div class="star">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                </div>
+                <p> 100 đánh giá</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="pro1">
+            <img class="pro_img" src="Image/product_image2.jpg">
+            <p class="pro_name">Tên sản phẩm 1</p>
+            <p class="pro_price">200.000</p>
+            <div class="vote">
+                <div class="star">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                </div>
+                <p> 100 đánh giá</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="pro1">
+            <img class="pro_img" src="Image/product_image3.jpg">
+            <p class="pro_name">Tên sản phẩm 1</p>
+            <p class="pro_price">200.000</p>
+            <div class="vote">
+                <div class="star">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                </div>
+                <p> 100 đánh giá</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="pro1">
+            <img class="pro_img" src="Image/product_image4.jpg">
+            <p class="pro_name">Tên sản phẩm 1</p>
+            <p class="pro_price">200.000</p>
+            <div class="vote">
+                <div class="star">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                    <img src="Image/star-solid.svg">
+                </div>
+                <p> 100 đánh giá</p>
+            </div>
+        </div>
+    </div>
+
+    <h1>Nhà phân phối chính thức của</h1>
+
+    <div class="phan_phoi">
+        <img src="Image/doi_tac1.jpg">
+        <img src="Image/doi_tac2.png">
+        <img src="Image/doi_tac3.png">
+        <img src="Image/doi_tac4.png">
+    </div>
+
+    <h1>Catmart reviews</h1>
+
+    <div class="review">
+        <div class="review_pro">
+            <img class="rv_img" src="Image/review1.jpg">
+            <div class="rv_name">Username 1</div>
+            <p class="rv_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fugit
+                temporibus illum illo! Quasi nulla nam illum similique cumque amet. Consectetur fugit sapiente,
+                quasi in
+                praesentium earum nisi blanditiis quo.</p>
+        </div>
+        <div class="review_pro">
+            <img class="rv_img" src="Image/review2.jpg">
+            <div class="rv_name">Username 2</div>
+            <p class="rv_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fugit
+                temporibus illum illo! Quasi nulla nam illum similique cumque amet. Consectetur fugit sapiente,
+                quasi in
+                praesentium earum nisi blanditiis quo.</p>
+        </div>
+        <div class="review_pro">
+            <img class="rv_img" src="Image/review3.jpg">
+            <div class="rv_name">Username 3</div>
+            <p class="rv_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fugit
+                temporibus illum illo! Quasi nulla nam illum similique cumque amet. Consectetur fugit sapiente,
+                quasi in
+                praesentium earum nisi blanditiis quo.</p>
+        </div>
+    </div>
+    <div class="cta_cat">
+        <img src="Image/cta_img.png">
+        <div class="slogan">
+            <p>Nhận khuyến mãi mới</p>
+            <p>Ngay hôm nay!</p>
+        </div>
+        <div class="email">
+            <input type="text" class="tim_kiem" placeholder="Nhập email của bạn">
+            <button class="button_tim_kiem"> Gửi email </button>
+        </div>
+    </div>
+    <div class="cam_ket">
+        <div class="cam_ket1">
+            <img src="Image/TRUCK.png">
+            <div class="cam_ket_content">
+                <p class="title"> Giao hàng cực nhanh</p>
+                <p class="text"> Đối tác với nhiều đơn vị vận chuyển uy tín</p>
+            </div>
+        </div>
+        <div class="cam_ket1">
+            <img src="Image/MONEY.png">
+            <div class="cam_ket_content">
+                <p class="title">Mua hàng siêu tiết kiệm</p>
+                <p class="text"> Tiết kiệm hơn từ 10% - 30% so với giá thị trường</p>
+            </div>
+        </div>
+        <div class="cam_ket1">
+            <img src="Image/PRICE.png">
+            <div class="cam_ket_content">
+                <p class="title"> Sản phẩm chính hãng 100%</p>
+                <p class="text"> Sản phẩm được nhập khẩu chính hãng</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot_left">
+            <p><strong>CATMART VIỆT NAM</strong></p>
+            <p><strong>Cửa hàng chính:</strong> 20B, KĐT Mỗ Lao, Hà Đông, Hà Nội</p>
+            <p> <strong>Cơ sở 2: </strong>48A, Ao Sen, Hà Đông, Hà Nội</p>
+            <p><strong>Điện thoại:</strong> 0988888888</p>
+            <p><strong>Email</strong> catmart@gmail.com</p>
+        </div>
+        <div class="policy">
+            <p><strong> CHÍNH SÁCH </strong></p>
+            <a href="#Doi_tra">Chính sách đổi trả</a>
+            <a href="#Doi_tra">Chính sách bảo mật</a>
+            <a href="#Doi_tra">Chính sách giao hàng</a>
+        </div>
+        <div class="ho_tro">
+            <p> <strong>HỖ TRỢ KHÁCH HÀNG</strong></p>
+            <a href="#Doi_tra">Hướng dẫn mua hàng</a>
+            <a href="#Doi_tra">Hướng dẫn thanh toán</a>
+        </div>
+        <div class="foot_right">
+            <p><strong>KẾT NỐI VỚI CHÚNG TỐI</strong></p>
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalLogin" class="modalLogin">
+        <div class="modalLogin_content">
+            <span class="close">&times;</span>
+            <div class="login_left">
+                <h1>Đăng nhập ngay</h1>
+                <p>Mừng bạn quay trở lại</p>
+                <div class="google">
+                    <img src="Image/icons_google.png">
+                    <span>Đăng nhập với Google</span>
+                </div>
+                <p>hoặc Đăng nhập với Email</p>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Nhập tên tài khoản">
+            </div>
+        </div>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script> -->
+</body>
+<script src="script.js"></script>
+
+</html>
