@@ -33,10 +33,7 @@
             <p>Chào mừng đến với CatMart!!!</p>
         </div>
         <div class="right">
-            <!-- <a href="#profile">
-                <img src="Image/icon_progile.png">
-                Tài khoản
-            </a> -->
+
             <a href="#profile">
                 <img src="Image/icon_progile.png">
             </a>
@@ -45,16 +42,10 @@
                 <div id="myDropdown" class="dropdown-content">
                     <a id="login">Đăng nhập</a>
 
-                    <a id="reges" href="#">Đăng ký</a>
+                    <a id="register" href="#">Đăng ký</a>
                 </div>
             </div>
-            <!-- <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Tài khoản</button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a id="login" href="#">Đăng nhập</a>
-                  <a id="reges" href="#">Đăng ký</a>
-                </div>
-              </div> -->
+
             <a href="#location">
                 <img src="Image/location.png">
                 Hệ thống cửa hàng
@@ -67,9 +58,8 @@
         <div class="header">
             <img id="logo" src="Image/logo.png">
             <div class="search">
-                <input type="text" class="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
+                <input type="text" class="tim_kiem" name="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
                 <button class="button_tim_kiem"> Tìm kiếm </button>
-                <!-- <span> Tìm kiếm</span> -->
             </div>
             <div class="gio_hang">
                 <div class="gio_hang_img">
@@ -89,19 +79,19 @@
         <div class="nav_bar">
             <ul class="dieu_huong">
                 <li>
-                    <a href="#homepage" id="home_page"> Trang chủ </a>
+                    <a class="nav_text" href="#homepage" id="home_page"> Trang chủ </a>
                 </li>
                 <li>
-                    <a href="/Sale/index.html"> Ưu đãi </a>
+                    <a class="nav_text" href="/CatMart/Sale/"> Ưu đãi </a>
                 </li>
                 <li>
-                    <a href="#Sanpham"> Sản phẩm </a>
+                    <a class="nav_text" href="#Sanpham"> Sản phẩm </a>
                 </li>
                 <li>
-                    <a href="#Vechungtoi"> Về chúng tôi </a>
+                    <a class="nav_text" href="#Vechungtoi"> Về chúng tôi </a>
                 </li>
                 <li>
-                    <a href="#lienhe"> Liên hệ </a>
+                    <a class="nav_text" href="#lienhe"> Liên hệ </a>
                 </li>
             </ul>
         </div>
@@ -223,7 +213,7 @@
             <p>Ngay hôm nay!</p>
         </div>
         <div class="email">
-            <input type="text" class="tim_kiem" placeholder="Nhập email của bạn">
+            <input type="text" class="tim_kiem" name="mail" placeholder="Nhập email của bạn">
             <button class="button_tim_kiem"> Gửi email </button>
         </div>
     </div>
@@ -250,6 +240,7 @@
             </div>
         </div>
     </div>
+    //Footer
     <div class="footer">
         <div class="foot_left">
             <p><strong>CATMART VIỆT NAM</strong></p>
@@ -284,7 +275,7 @@
             </div>
         </div>
     </div>
-
+    // Phan nay cua PopUp dang nhap
     <div id="myModalLogin" class="modalLogin">
         <div class="modalLogin_content">
             <div class="login_content">
@@ -296,37 +287,78 @@
                         <img src="Image/icons_google.png">
                         <span>Đăng nhập với Google</span>
                     </div>
-                    <p>hoặc Đăng nhập với Email</p>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Nhập tên tài khoản">
+                    <div class="orReg">
+                        <div class="line"></div>
+                        <p>hoặc Đăng nhập với</p>
+                        <div class="line"></div>
+                    </div>
+                    <label for="userName">Email</label>
+                    <input type="email" id="userName" placeholder="Nhập tên tài khoản" autocomplete="off">
                     <!-- <br> -->
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Nhập mật khẩu">
+                    <label for="userPass">Password</label>
+                    <input type="password" id="userPass" placeholder="Nhập mật khẩu" autocomplete="off">
                     <div class="quen_pass">
                         <div class="remember">
-                            <input type="checkbox" id="checkbox">
-                            <label id="ghi_nho" for="checkbox">Ghi nhớ đăng nhập</label>
+                            <input type="checkbox" id="ghi_nho">
+                            <label for="ghi_nho">Ghi nhớ đăng nhập</label>
                         </div>
                         <a>Quên mật khẩu?</a>
                     </div>
                     <button id="btnLogin">Đăng nhập</button>
-                    <p>Chưa có tài khoản? <span>Tạo tài khoản ngay</span> <a href="#">Đăng ký</a> </p>
+                    <p>Chưa có tài khoản? <span>Tạo tài khoản ngay</span> <a id="link_reg" href="#">Đăng ký</a> </p>
                 </div>
                 <div class="login_right">
                     <img src="Image/login_img.png" alt="Login Image">
                 </div>
             </div>
-
         </div>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script> -->
+    </div>
+
+    //Phan nay cua Popup dang ky
+
+    <div id="myModaRegis" class="modalReg">
+        <div class="modalReg_content">
+            <div class="reg_content">
+                <span class="close2">&times;</span>
+                <h3>Catmart</h3>
+                <h2>Đăng ký tài khoản</h2>
+                <div class="row">
+                    <div class="row_box">
+                        <label for="ho">Họ</label>
+                        <input type="text" id="ho" name="ho" placeholder="Nhập họ của bạn" autocomplete="off">
+                    </div>
+                    <div class="row_box">
+                        <label for="ho">Tên</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập tên của bạn" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row_box">
+                        <label for="userName2">Email</label>
+                        <input type="email" id="userName2" placeholder="Nhập tên tài khoản" autocomplete="off">
+                    </div>
+                    <div class="row_box">
+                        <label for="userPass2">Password</label>
+                        <input type="password" id="userPass2" placeholder="Nhập mật khẩu" autocomplete="off">
+                    </div>
+                </div>
+                <div class="btnReg">
+                    <img src="Image/dangky 3.png">
+                    <button>Đăng ký</button>
+                </div>
+                <div class="orReg">
+                    <div class="line"></div>
+                    <p>hoặc Đăng nhập với</p>
+                    <div class="line"></div>
+                </div>
+                <img src="Image/Group 28.png">
+                <p id="chinh_sach">Bằng việc tiếp tục, bạn đã đọc và đồng ý với điều khoản sử dụng và Chính sách bảo mật
+                    thông tin cá
+                    nhân của CatMart </p>
+
+            </div>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 

@@ -18,8 +18,6 @@ window.onclick = function (event) {
   }
 }
 
-
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
@@ -27,23 +25,31 @@ window.onclick = function (event) {
   }
 }
 
-// $(document).ready(function () {
-// Get the modal
+//PopUp dang nhap
 var modal = document.getElementById("myModalLogin");
-
-// Get the button that opens the modal
 var btn = document.getElementById("login");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 }
-// });
+
+//PopUp dang ky
+var modal_2 = document.getElementById("myModaRegis");
+var btn_2 = document.getElementById("register");
+var btn_3 = document.getElementById("link_reg");
+var span_2 = document.getElementsByClassName("close2")[0];
+btn_2.onclick = function () {
+  modal_2.style.display = "block";
+}
+btn_3.onclick = function () {
+  modal_2.style.display = "block";
+  modal.style.display = "none";
+}
+span_2.onclick = function () {
+  modal_2.style.display = "none";
+}
+
+

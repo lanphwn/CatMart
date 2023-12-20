@@ -8,14 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <title>Ưu đãi</title>
+    <title>Cat Mart</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -25,7 +21,7 @@
         <div class="left">
             <div class="image_nav">
                 <a href="#facebook">
-                    <img src="Image/facebook-f.svg" alt="Facebook" id="facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
                 </a>
                 <a href="#instar">
                     <img src="Image/instagram.svg" alt="Instargram">
@@ -37,13 +33,22 @@
             <p>Chào mừng đến với CatMart!!!</p>
         </div>
         <div class="right">
+
             <a href="#profile">
                 <img src="Image/icon_progile.png">
-                <span>Tài khoản</span>
             </a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Tài khoản</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="login">Đăng nhập</a>
+
+                    <a id="register" href="#">Đăng ký</a>
+                </div>
+            </div>
+
             <a href="#location">
                 <img src="Image/location.png">
-                <span>Hệ thống cửa hàng</span>
+                Hệ thống cửa hàng
             </a>
         </div>
     </div>
@@ -53,12 +58,14 @@
         <div class="header">
             <img id="logo" src="Image/logo.png">
             <div class="search">
-                <input type="text" class="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
+                <input type="text" class="tim_kiem" name="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
                 <button class="button_tim_kiem"> Tìm kiếm </button>
-                <!-- <span> Tìm kiếm</span> -->
             </div>
             <div class="gio_hang">
-                <img src="Image/shopping bag.png">
+                <div class="gio_hang_img">
+                    <img src="Image/shopping bag.png">
+                    <p>0</p>
+                </div>
                 <p>Giỏ hàng</p>
             </div>
             <div class="lien_he">
@@ -72,10 +79,10 @@
         <div class="nav_bar">
             <ul class="dieu_huong">
                 <li>
-                    <a href="/Homepage/index.html" id="home_page"> Trang chủ </a>
+                    <a href="/CatMart/Homepage/index.html" id="home_page"> Trang chủ </a>
                 </li>
                 <li>
-                    <a href="#Uudai" id="uu_dai"> Ưu đãi </a>
+                    <a href="/Sale/index.html" id="uu_dai"> Ưu đãi </a>
                 </li>
                 <li>
                     <a href="#Sanpham"> Sản phẩm </a>
@@ -202,7 +209,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="looking">
     </div>
 
@@ -242,5 +249,6 @@
     </div>
 
 </body>
+<script src="script.js"></script>
 
 </html>
