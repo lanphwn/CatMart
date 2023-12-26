@@ -1,23 +1,3 @@
-function openTable(evt, tableName) {
-
-    var i, tabcontent, tablinks;
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tableName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -36,8 +16,7 @@ window.onclick = function (event) {
     }
 }
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+
 function myFunction1() {
     document.getElementById("myDropdown1").classList.toggle("show1");
 }
@@ -58,7 +37,7 @@ window.onclick = function (event) {
 
 
 var modal = document.getElementById("myModal");
-var btn = document.getElementsByClassName("mdh")[0];
+var btn = document.getElementsByClassName("more")[0];
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function () {
     modal.style.display = "block";
@@ -72,9 +51,17 @@ window.onclick = function (event) {
     }
 }
 
-function toggle(source) {
-    checkboxes = document.getElementsByName('foo');
-    for (var i = 0, n = checkboxes.length; i < n; i++) {
-        checkboxes[i].checked = source.checked;
+var modal2 = document.getElementById("myModal2");
+var btn2 = document.getElementsByClassName("more2")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+btn2.onclick = function () {
+    modal2.style.display = "block";
+}
+span2.onclick = function () {
+    modal2.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
     }
 }
