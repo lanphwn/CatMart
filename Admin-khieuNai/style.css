@@ -11,7 +11,7 @@ body {
 }
 
 .sidebar_area {
-    width: 12%;
+    width: 13%;
     background: #DE744C;
     display: flex;
     /* justify-content: center; */
@@ -71,7 +71,7 @@ h1 {
 }
 
 .main_area {
-    width: 88%;
+    width: 87%;
     max-height: 100%;
     overflow-y: auto;
 }
@@ -82,7 +82,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2%;
+    padding: 0 3%;
 }
 
 .header p {
@@ -117,7 +117,7 @@ h1 {
 .admin_infor {
     display: flex;
     align-items: center;
-    gap: 15px
+    gap: 20px
 }
 
 .admin_infor img {
@@ -131,7 +131,7 @@ h1 {
     height: 5vh;
     display: flex;
     align-items: center;
-    padding: 5px 2%;
+    padding: 5px 3%;
     gap: 10px;
 }
 
@@ -154,13 +154,13 @@ h1 {
 .line_vitri {
     height: 1px;
     background-color: #D4D4D4;
-    margin: 0px 2%;
+    margin: 0px 3%;
 }
 
 .overall {
     display: flex;
     justify-content: space-between;
-    padding: 20px 2%;
+    padding: 20px 3%;
     align-items: center;
 }
 
@@ -181,7 +181,7 @@ h1 {
 }
 
 .block {
-    padding: 0px 2%;
+    padding: 0px 3%;
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
@@ -235,11 +235,11 @@ h3 {
     font-size: 25px;
     letter-spacing: 0.22px;
     font-weight: 600;
-    padding: 1% 2%;
+    padding: 1% 3%;
 }
 
 .bang {
-    padding: 0 2%;
+    padding: 0 3%;
     /* margin-bottom: 2%; */
 }
 
@@ -260,8 +260,9 @@ table {
 th {
     background-color: #FFEC88;
     text-align: left;
-    padding: 6px 2%;
+    padding: 10px 2%;
     color: #616161;
+    margin-bottom: 10px;
 }
 
 .time {
