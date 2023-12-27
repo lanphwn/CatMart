@@ -42,7 +42,6 @@ function myFunction1() {
     document.getElementById("myDropdown1").classList.toggle("show1");
 }
 
-// Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn1')) {
         var dropdowns1 = document.getElementsByClassName("dropdown-content1");
@@ -58,7 +57,7 @@ window.onclick = function (event) {
 
 
 var modal = document.getElementById("myModal");
-var btn = document.getElementsByClassName("mdh")[0];
+var btn = document.getElementsByClassName("add_admin")[0];
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function () {
     modal.style.display = "block";
@@ -72,9 +71,3 @@ window.onclick = function (event) {
     }
 }
 
-function toggle(source) {
-    checkboxes = document.getElementsByName('foo');
-    for (var i = 0, n = checkboxes.length; i < n; i++) {
-        checkboxes[i].checked = source.checked;
-    }
-}
