@@ -46,12 +46,21 @@ h1 {
     list-style: none;
     color: #FFF;
     box-sizing: border-box;
-    padding: 5% 0 5% 19%;
+    padding: 5% 0 5% 3.5vw;
     display: flex;
     align-items: center;
     height: 20%;
 }
 
+.categories_list a {
+    text-decoration: none;
+    color: white;
+}
+
+.list_item button {
+    border: none;
+    background-color: unset;
+}
 
 #now {
     background-color: #FFF4F4;
@@ -213,7 +222,7 @@ h1 {
 }
 
 .block_sum {
-    font-family: Roboto;
+    font-family: sans-serif;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 0.28px;
@@ -317,8 +326,8 @@ input[type="checkbox"]:checked {
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 67px;
-    top: -10px;
+    left: 13vw;
+    top: 189px;
     background: #FFF4F4;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -360,8 +369,8 @@ input[type="checkbox"]:checked {
 .dropdown-content1 {
     display: none;
     position: absolute;
-    left: 70px;
-    top: -13px;
+    left: 13vw;
+    top: 470px;
     background: #FFF4F4;
     min-width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);

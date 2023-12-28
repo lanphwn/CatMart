@@ -4,19 +4,16 @@ body {
     display: flex;
     font-family: "Baloo Bhaina 2";
     color: #616161;
-    /* overflow-x: scroll; */
 }
 
 * {
-    /* padding: 0; */
     margin: 0;
 }
 
 .sidebar_area {
-    width: 13%;
+    width: 13vw;
     background: #DE744C;
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     position: static;
@@ -39,7 +36,6 @@ h1 {
     justify-content: center;
     padding: 0;
     box-sizing: border-box;
-    /* gap: 2vh; */
 }
 
 .categories_list li {
@@ -48,12 +44,21 @@ h1 {
     list-style: none;
     color: #FFF;
     box-sizing: border-box;
-    padding: 5% 0 5% 19%;
+    padding: 5% 0 5% 3.5vw;
     display: flex;
     align-items: center;
     height: 20%;
 }
 
+.categories_list a {
+    text-decoration: none;
+    color: white;
+}
+
+.list_item button {
+    border: none;
+    background-color: unset;
+}
 
 #now {
     background-color: #FFF4F4;
@@ -73,7 +78,7 @@ h1 {
 }
 
 .main_area {
-    width: 87%;
+    width: 87vw;
     max-height: 100%;
     overflow-y: auto;
 }
@@ -328,11 +333,9 @@ td {
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
-    /* overflow: hidden; */
 
 }
 
-/* Modal Content/Box */
 .modal-content {
     display: flex;
     justify-content: center;
@@ -341,12 +344,9 @@ td {
     height: 100%;
 }
 
-
-
 .content {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     width: 58%;
     height: 80%;
     background-color: #FFF;
@@ -369,6 +369,8 @@ td {
     color: #0085FF;
     font-weight: 500;
 }
+
+
 
 .close {
     display: flex;
@@ -442,35 +444,30 @@ td {
     text-align: left;
 }
 
-/* Dropdown Button */
+
 .dropbtn {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     cursor: pointer;
 }
 
-/* .dropbtn:hover,
-.dropbtn:focus {} */
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 67px;
-    top: -10px;
+    left: 13vw;
+    top: 189px;
     background: #FFF4F4;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: #838383;
     padding: 7px 16px;
@@ -483,12 +480,10 @@ td {
     border-bottom: 3px solid #e4dfdf;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     color: #DE744C;
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display: block;
 }
@@ -508,8 +503,8 @@ td {
 .dropdown-content1 {
     display: none;
     position: absolute;
-    left: 70px;
-    top: -13px;
+    left: 13vw;
+    top: 470px;
     background: #FFF4F4;
     min-width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
