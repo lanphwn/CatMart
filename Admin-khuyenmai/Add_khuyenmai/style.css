@@ -354,3 +354,91 @@ tr:nth-of-type(5) .quyen span {
     background: #E6E6E6;
     color: #8F9BB3;
 }
+
+.main_content {
+    margin: 50px 3%;
+    border-radius: 5px;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 14.2px 0px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    background: #FFECE4;
+    padding: 10px 3%;
+
+}
+
+.add_content {
+    display: flex;
+    padding: 5px 3%;
+    flex-direction: row;
+}
+
+.left,
+.right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.note {
+    display: flex;
+}
+
+.blank_space {
+    width: 193px;
+    height: 101px;
+    background: #F3F3F3;
+    margin: 10px 0;
+}
+
+.right {
+    align-items: center;
+
+    #note {
+        max-width: 194px;
+        line-height: 1.25;
+        text-align: center;
+        font-size: 14px;
+        color: #838383;
+    }
+}
+
+.picture {
+    transition: .3s;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed #ddd;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    width: 115px;
+    height: 33px;
+
+    &:hover {
+        background-color: #DE744C;
+        color: #FFF;
+        border: 3px solid #DE744C
+    }
+
+    &:hover i {
+        color: #FFF;
+    }
+
+    i {
+        padding: 10px;
+    }
+
+    input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 4px;
+    }
+}
