@@ -197,7 +197,7 @@
                         <label for="mdh">Mã chương trình</label>
                         <input type="text" name="mdh" placeholder="Mã tự động">
                     </div>
-                    <div>
+                    <div class="tenchuongtrinh">
                         <label for="mdh">Tên chương trình</label>
                         <div class="note">
                             <input type="text" name="mdh" placeholder="Tên chương trình khuyến mãi">
@@ -205,11 +205,11 @@
                         </div>
                     </div>
                     <div>
-                        <span>Trạng thái</span>
-                        <input type="checkbox" name="kichhoat">
-                        <label for="kichhoat">Kích hoạt</label>
-                        <input type="checkbox" name="chuaapdung">
-                        <label for="chuaapdung">Chưa áp dụng</label>
+                        <label>Trạng thái</label>
+                        <input type="radio" name="state" value="kichhoat">
+                        <span>Kích hoạt</span>
+                        <input type="radio" name="state" value="chuaapdung">
+                        <span >Chưa áp dụng</span>
                     </div>
                 </div>
                 <div class="right">
@@ -224,6 +224,89 @@
                     <p id="note">Dung lượng file tối đa 1MB. Định dạng JPEF PNG.
                     </p>
                 </div>
+            </div>
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks active"  onclick="openTable(event, 'Hinhthuc')">Hình thức khuyến mãi</button>
+                <button class="tablinks" onclick="openTable(event, 'Thoigian')">Thời gian khuyến mãi</button>
+                <button class="tablinks" onclick="openTable(event, 'Phamvi')">Phạm vi áp dụng</button>
+            </div>
+            
+            <!-- Tab content -->
+            <div id="Hinhthuc" class="tabcontent">
+                <div>
+                    <label>Khuyến mãi theo</label>
+                    <select>
+                        <option>Đơn hàng</option>
+                        <option>Tổng hóa đơn</option>
+                    </select>
+                    <label>Hình thức</label>
+                    <select>
+                        <option>Giảm giá đơn hàng</option>
+                        <option>Tổng hóa đơn</option>
+                    </select>
+
+                </div>
+                <div class="solieu">
+                    <div>
+                        <label for="sum"> Tổng đơn hàng </label>
+                        <input type="text" id="sum" min="0" value="0" placeholder="0"> <span>VNĐ</span>
+                    </div>
+                    <div>
+                        <label for="discount"> Giảm giá </label>
+                        <input type="text" id="discount" > 
+                        <button>VNĐ</button>
+                        <button>%</button>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div id="Thoigian" class="tabcontent">
+                <label for="start_date">Bắt đầu từ ngày</label>
+                <input type="date" id="start_date">
+                <label for="end_date">Bắt đầu từ ngày</label>
+                <input type="date" id="end_date">
+                
+            </div>
+            
+            <div id="Phamvi" class="tabcontent">
+                <div  class="luachon">
+                    <label>Theo chi nhánh</label>
+                    <div class="luachon_content">
+                        <div>
+                            <input type="radio" name="chinhanh"> <span>Toàn hệ thống</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="chinhanh"> <span> Chi nhánh</span>
+                                <select> 
+                                    <option>Cơ sở 1</option>
+                                    <option>Cơ sở 2</option>
+                                    <option>Cơ sở 31</option>
+                                </select>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="luachon">
+                    <label>Theo khách hàng</label>
+                    <div class="luachon_content">
+                        <div>
+                            <input type="radio" name="khachhang"> <span>Toàn bộ khách hàng</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="khachhang"> <span>Nhóm khách hàng</span>
+                            <select> 
+                                <option>Khách hàng thân thiết</option>
+                                <option>Khách hàng mới</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button_xacnhan">
+                <button>Lưu</button>
+                <button>Hủy</button>
             </div>
         </div>
     </div>

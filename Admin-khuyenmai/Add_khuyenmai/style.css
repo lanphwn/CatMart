@@ -3,7 +3,7 @@ body {
     width: 100vw;
     display: flex;
     font-family: "Baloo Bhaina 2";
-    color: #616161;
+    color: black;
 }
 
 * {
@@ -374,26 +374,33 @@ h2 {
     flex-direction: row;
 }
 
-.left,
-.right {
-    width: 45%;
+.left {
+    width: 65%;
+    padding-left: 3%;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
+
+    .tenchuongtrinh {
+        display: flex;
+        margin-bottom: 15px;
+
+        .note {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
-.note {
-    display: flex;
-}
 
-.blank_space {
-    width: 193px;
-    height: 101px;
-    background: #F3F3F3;
-    margin: 10px 0;
-}
+
 
 .right {
+    padding-top: 30px;
     align-items: center;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
 
     #note {
         max-width: 194px;
@@ -402,6 +409,39 @@ h2 {
         font-size: 14px;
         color: #838383;
     }
+
+    .blank_space {
+        width: 193px;
+        height: 101px;
+        background: #F3F3F3;
+        margin: 10px 0;
+    }
+
+    &:active {
+        border: 1px solid #ddd;
+    }
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"] {
+    font-family: "Baloo Bhaina 2";
+    font-size: 16px;
+    padding-left: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width: 400px;
+    background-color: unset;
+    border: none;
+    height: 40px;
+    border-bottom: 2px solid #D4D4D4;
+}
+
+input[type="radio"] {
+    margin-left: 80px;
+
 }
 
 .picture {
@@ -441,4 +481,164 @@ h2 {
         font-size: 16px;
         margin-top: 4px;
     }
+}
+
+
+
+
+.tab {
+    padding-top: 10px;
+    overflow: hidden;
+    padding-left: 63px;
+    background-color: #f1f1f1;
+
+    .tablinks {
+        font-size: 16.5px;
+        font-weight: 600;
+        font-family: "Baloo Bhaina 2";
+        padding: 5px 10px;
+        margin: 0 10px;
+    }
+}
+
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    border-bottom: 3px solid #DE744C;
+    box-sizing: border-box;
+    transition: all 0.05s;
+
+}
+
+.tabcontent {
+    display: none;
+    padding: 30px 12px;
+    width: 65%;
+    padding-left: 6%;
+    padding-top: 30px;
+}
+
+#Hinhthuc {
+    display: block;
+
+    label:nth-of-type(2) {
+        margin-left: 190px;
+    }
+
+    .solieu {
+        display: flex;
+        gap: 207px
+    }
+
+    input[type="text"] {
+        font-family: "Baloo Bhaina 2";
+        font-size: 16px;
+        padding-left: 10px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+        width: 50px;
+        background-color: unset;
+        border: none;
+        height: 40px;
+        border-bottom: 2px solid #D4D4D4;
+    }
+
+
+}
+
+select, input[type="date"] {
+    font-family: "Baloo Bhaina 2";
+    font-size: 16px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: unset;
+    border: none;
+    height: 40px;
+    border-bottom: 2px solid #D4D4D4;
+}
+
+.solieu button:first-of-type {
+    box-sizing: content-box;
+    border: unset;
+    border-radius: 4px;
+    background: #4CB050;
+    padding: 5px 10px;
+    color: white;
+}
+
+.solieu button:nth-of-type(2) {
+    box-sizing: content-box;
+    border: unset;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background: #C6C6C6;
+}
+
+.button_xacnhan{
+    display: flex;
+    gap: 10px;
+    padding: 2% 3%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.button_xacnhan button:first-of-type {
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    border: unset;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: #4CB050;
+}
+
+.button_xacnhan button:last-of-type {
+    font-size: 18px;
+    font-weight: bolder;
+    border: unset;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: #C6C6C6;
+    color: #616161;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#Thoigian label:nth-of-type(2){
+    margin-left: 190px;
+}
+
+.luachon{
+    display: flex;
+
+    label{
+        width: 12%;
+    }
+
+    .luachon_content{
+        display: flex;
+        justify-content: first baseline;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
 }
