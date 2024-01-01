@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Cat Mart</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="head">
+    </div>
+    <div class="top_bar">
+        <div class="left">
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube" id="youtube">
+                </a>
+            </div>
+            <p>Chào mừng đến với CatMart!!!</p>
+        </div>
+        <div class="right">
+
+            <a href="#profile">
+                <img src="Image/icon_progile.png">
+            </a>
+            <div class="dropdown">
+                <a href="../tai_khoan_cua_toi/index.html">
+                    <button class="dropbtn">Nguyễn Minh Đức</button>
+                </a>
+                <div class="dropdown-content">
+                    <a id="profile" href="../tai_khoan_cua_toi/index.html">Hồ sơ của tôi</a>
+
+                    <a id="follow-orders" href="../don_hang_cua_toi/index.html">Theo dõi đơn hàng</a>
+                    <a id="logout" href="../Homepage/index.html">Đăng xuất</a>
+                </div>
+            </div>
+
+            <a href="#location">
+                <img src="Image/location.png">
+                Hệ thống cửa hàng
+            </a>
+        </div>
+    </div>
+    <div class="sticky_scroll">
+        <div class="header">
+            <img id="logo" src="Image/logo.png">
+            <div class="search">
+                <input type="text" class="tim_kiem" name="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
+                <button class="button_tim_kiem"> Tìm kiếm </button>
+            </div>
+            <div class="gio_hang">
+                <div class="gio_hang_img">
+                    <img src="Image/shopping bag.png">
+                    <p>0</p>
+                </div>
+                <p>Giỏ hàng</p>
+            </div>
+            <div class="lien_he">
+                <div class="sdt">
+                    <p id="phone_num">0988888888</p>
+                    <p id="hotline">HOTLINE ĐẶT HÀNG</p>
+                </div>
+                <img src="Image/phone.png">
+            </div>
+        </div>
+        <div class="nav_bar">
+            <ul class="dieu_huong">
+                <li>
+                    <a class="nav_text" href="../Homepage/index.html"> Trang chủ </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="../Sale/index.html"> Ưu đãi </a>
+                </li>
+                <li class="have-drop">
+                    <a class="nav_text active" href="../san_pham/index.html" id="product"> Sản phẩm </a>
+                    <div class="nav-drop-product">
+                        <div class="group-opt">
+                            <a href="../san_pham/thuc_an_kho.html">
+                                Thức ăn khô cho mèo
+                            </a>
+                            <a href="../san_pham/pate_nuoc_sot.html">
+                                Pate & nước sốt cho mèo
+                            </a>
+                            <a href="../san_pham/thuc_pham_cn.html">
+                                Thực phẩm chức năng cho mèo
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_text" href="../ve_chung_toi/index.html"> Về chúng tôi </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="#lienhe"> Liên hệ </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+
+        <div class="sider">
+            <aside>
+                <h2 id="sider-title">DANH MỤC SẢN PHẨM</h4>
+                <div class="filter-box">
+                    <h3 class="filter-title">Tính chất sản phẩm</h3>
+                    <div class="group-filter">
+                        <div class="filter">
+                            <input type="checkbox" name="thucankho" id="thucankho">
+                            <label for="thucankho">Thức ăn khô</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="thucanuot" id="thucanuot">
+                            <label for="thucanuot">Thức ăn ướt</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="khac" id="khac">
+                            <label for="khac">Khác</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <h3 class="filter-title">Khoảng giá</h3>
+                    <div class="group-filter">
+                        <div class="filter">
+                            <input type="checkbox" name="100" id="100">
+                            <label for="100">Dưới 100.000 đ</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="100-200" id="100-200">
+                            <label for="100-200">100.000 đ - 200.000 đ</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="200-500" id="200-500">
+                            <label for="200-500">200.000 đ - 500.000 đ</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="500-1000" id="500-1000">
+                            <label for="500-1000">500.000 đ - 1.000.000 đ</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="over1000" id="over1000">
+                            <label for="over1000">Trên 1.000.000 đ</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <h3 class="filter-title">Thương hiệu</h3>
+                    <div class="group-filter">
+                        <div class="filter">
+                            <input type="checkbox" name="anf" id="anf">
+                            <label for="anf">ANF</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="whiskas" id="whiskas">
+                            <label for="whiskas">Whiskas</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="nutriplan" id="nutriplan">
+                            <label for="nutriplan">Nutri Plan</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="naturebridge" id="naturebridge">
+                            <label for="naturebridge">Nature Bridge</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <h3 class="filter-title">Size</h3>
+                    <div class="group-filter">
+                        <div class="filter">
+                            <input type="checkbox" name="xs" id="xs">
+                            <label for="xs">XS</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="s" id="s">
+                            <label for="s">S</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="m" id="m">
+                            <label for="m">M</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="l" id="l">
+                            <label for="l">L</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="xl" id="xl">
+                            <label for="xl">XL</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="list-product">
+            <div class="dieu_huong_ve_chung_toi">
+                <a href="../Homepage/index.html" style="color: rgb(109, 109, 109);">Trang chủ</a>
+                <div class="line"></div>
+                <a href="./index.html" id="current-page">Sản phẩm</a>
+            </div>
+            <div class="main">
+                <div class="row-item">
+                    <div class="item" id="thuc-an-kho">
+                        <div class="item-img">
+                            <a href="./item-takho.html">
+                                <img src="./image/item1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-takho.html">
+                                Thức ăn khô ROYAL CANIN
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">145,000đ</div>
+                            <div class="item-root-cost">195,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="item" id="thuc-an-pate">
+                        <div class="item-img">
+                            <a href="./item-pate.html">
+                                <img src="./image/item2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-pate.html">
+                                Pate sốt cá ngừ WHISKAS
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">25,000đ</div>
+                            <div class="item-root-cost">35,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="item" id="khac">
+                        <div class="item-img">
+                            <a href="./item-khac.html">
+                                <img src="./image/item3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-khac.html">
+                                Gel dinh dưỡng GIMCAT
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">190,000đ</div>
+                            <div class="item-root-cost">250,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="item" id="thuc-an-kho">
+                        <div class="item-img">
+                            <a href="./item-takho.html">
+                                <img src="./image/item1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-takho.html">
+                                Thức ăn khô ROYAL CANIN
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">145,000đ</div>
+                            <div class="item-root-cost">195,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="item" id="thuc-an-pate">
+                        <div class="item-img">
+                            <a href="./item-pate.html">
+                                <img src="./image/item2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-pate.html">
+                                Pate sốt cá ngừ WHISKAS
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">25,000đ</div>
+                            <div class="item-root-cost">35,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="item" id="khac">
+                        <div class="item-img">
+                            <a href="./item-khac.html">
+                                <img src="./image/item3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-khac.html">
+                                Gel dinh dưỡng GIMCAT
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">190,000đ</div>
+                            <div class="item-root-cost">250,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="item" id="thuc-an-kho">
+                        <div class="item-img">
+                            <a href="./item-takho.html">
+                                <img src="./image/item1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-takho.html">
+                                Thức ăn khô ROYAL CANIN
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">145,000đ</div>
+                            <div class="item-root-cost">195,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="item" id="thuc-an-pate">
+                        <div class="item-img">
+                            <a href="./item-pate.html">
+                                <img src="./image/item2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-pate.html">
+                                Pate sốt cá ngừ WHISKAS
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">25,000đ</div>
+                            <div class="item-root-cost">35,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="item" id="khac">
+                        <div class="item-img">
+                            <a href="./item-khac.html">
+                                <img src="./image/item3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="./item-khac.html">
+                                Gel dinh dưỡng GIMCAT
+                            </a>
+                            <div class="rate">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                                <img src="./image/Star 6.png" alt="">
+                            </div>
+                            <div class="item-cost">190,000đ</div>
+                            <div class="item-root-cost">250,000đ</div>
+                        </div>
+                        <div class="buy-btn">
+                            <button id="gradient">MUA NGAY</button>
+                            <button id="add-to-cart"><img src="./image/shopping bag_.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot_left">
+            <p><strong>CATMART VIỆT NAM</strong></p>
+            <p><strong>Cửa hàng chính:</strong> 20B, KĐT Mỗ Lao, Hà Đông, Hà Nội</p>
+            <p> <strong>Cơ sở 2: </strong>48A, Ao Sen, Hà Đông, Hà Nội</p>
+            <p><strong>Điện thoại:</strong> 0988888888</p>
+            <p><strong>Email</strong> catmart@gmail.com</p>
+        </div>
+        <div class="policy">
+            <p><strong> CHÍNH SÁCH </strong></p>
+            <a href="#Doi_tra">Chính sách đổi trả</a>
+            <a href="#Doi_tra">Chính sách bảo mật</a>
+            <a href="#Doi_tra">Chính sách giao hàng</a>
+        </div>
+        <div class="ho_tro">
+            <p> <strong>HỖ TRỢ KHÁCH HÀNG</strong></p>
+            <a href="#Doi_tra">Hướng dẫn mua hàng</a>
+            <a href="#Doi_tra">Hướng dẫn thanh toán</a>
+        </div>
+        <div class="foot_right">
+            <p><strong>KẾT NỐI VỚI CHÚNG TỐI</strong></p>
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

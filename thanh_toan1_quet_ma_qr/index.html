@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Cat Mart</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="head">
+    </div>
+    <div class="top_bar">
+        <div class="left">
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube" id="youtube">
+                </a>
+            </div>
+            <p>Chào mừng đến với CatMart!!!</p>
+        </div>
+        <div class="right">
+
+            <a href="#profile">
+                <img src="Image/icon_progile.png">
+            </a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Tài khoản</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="login">Đăng nhập</a>
+
+                    <a id="register" href="#">Đăng ký</a>
+                </div>
+            </div>
+
+            <a href="#location">
+                <img src="Image/location.png">
+                Hệ thống cửa hàng
+            </a>
+        </div>
+    </div>
+
+
+    <div class="sticky_scroll">
+        <div class="header">
+            <img id="logo" src="Image/logo.png">
+            <div class="search">
+                <input type="text" class="tim_kiem" name="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
+                <button class="button_tim_kiem"> Tìm kiếm </button>
+            </div>
+            <div class="gio_hang">
+                <div class="gio_hang_img">
+                    <a href="/gio_hang/index.html">
+                        <img src="Image/shopping bag.png">
+                        <p>1</p>
+                    </a>
+                </div>
+                <a href="/gio_hang/index.html">
+                    <p>Giỏ hàng</p>
+                </a>
+            </div>
+            <div class="lien_he">
+                <div class="sdt">
+                    <p id="phone_num">0988888888</p>
+                    <p id="hotline">HOTLINE ĐẶT HÀNG</p>
+                </div>
+                <img src="Image/phone.png">
+            </div>
+        </div>
+        <div class="nav_bar">
+            <ul class="dieu_huong">
+                <li>
+                    <a class="nav_text" href="/Homepage/index.html"> Trang chủ </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="/Sale/index.html"> Ưu đãi </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="#Sanpham"> Sản phẩm </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="/ve_chung_toi/index.html"> Về chúng tôi </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="/lien_he/index.html"> Liên hệ </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dieu_huong_thanh_toan">
+            <p style="color: rgb(109, 109, 109);">Trang chủ</p>
+            <div class="line"></div>
+            <p>Thanh toán</p>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="content0">
+        <div class="toggle">
+            <div class="address_popup">
+                <div class="address_title">
+                    Địa chỉ
+                </div>
+                <div class="in4">
+                    <div class="name_number">
+                        <input type="text" required placeholder="Họ và tên">
+                        <input type="text" required placeholder="Số điện thoại">
+                    </div>   
+                    <select required>
+                        <option value="">Tỉnh/ Thành Phố </option>
+                        <option value="hn">Hà Nội</option>
+                        <option value="hp">Hải Phòng </option>
+                        <option value="dn">Đà nẵng</option>
+                        <option value="hcm">Thành Phố Hồ Chí Minh </option>
+                    </select>              
+                    <select required >
+                        <option value="">Huyện/ Quận </option>
+                        <option value="hd">Hà Đông </option>
+                        <option value="tx">Thanh Xuân </option>
+                        <option value="tt">Thanh Trì</option>
+                        <option value="cg">Cấu Giấy </option>
+                    </select>              
+                    <select required>
+                        <option value="">Xã/ Phường </option>
+                        <option value="ml">Mộ Lao </option>
+                        <option value="vq">Văn Quán </option>
+                        <option value="xl">Xa La</option>
+    
+                    </select>
+                    <div class="address_detail">
+
+                        <input type="text" required placeholder="Địa chỉ cụ thể">            
+                    </div>                
+                </div>
+                <div class="done_hover">
+                    <button class="done">Xong</button>
+                </div>
+            </div>
+        </div>
+        <div class="title-content">
+            <h1>CATMART</h1>
+        </div>
+
+        <table>
+            <tr class="don_hang">
+                <td colspan="6">
+                    <h2>Đơn hàng</h2>
+                    <p id="soluong">(1 sản phẩm)</p>
+                </td>
+            </tr>
+            <tr class="gia_tri">
+                <th colspan="1">Sản phẩm</th>
+                <th colspan="2"></th>
+                <th class="grey">Đơn giá</th>
+                <th class="grey">Số lượng</th>
+                <th class="grey">Thành tiền</th>
+            </tr>
+            <tr class="san_pham">
+                <td>
+                    <img src="image/doi_tac1.jpg"></img>
+                </td>
+                <td colspan="2">Pate Cho Mèo Purina Proplan 85g</td>
+                <td> 30.000Đ</td>
+                <td>1</td>
+                <td>30.000Đ</td>
+            </tr>
+            <tr class="ghi_chu">
+                <td><label for="note">Ghi chú: </label></td>
+                <td colspan="5"><input type="text" name="note" placeholder="Lời nhắn cho đại lý. . . "></td>
+            </tr>
+            <tr class="dia_chi_nhan_hang">
+                <td colspan="6">
+                    <div class="add_title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15" fill="none">
+                            <path
+                                d="M5.99753 0C2.68362 0 0 2.6766 0 5.98183C0 8.39322 3.19573 12.4744 4.92408 14.5027C5.48543 15.1658 6.51456 15.1658 7.0759 14.5027C8.80426 12.4744 12 8.39322 12 5.98183C12 2.6766 9.31636 0 6.00246 0H5.99753ZM5.99753 7.12614C5.20475 7.12614 4.56462 6.48277 4.56462 5.69698C4.56462 4.91119 5.20967 4.26782 5.99753 4.26782C6.78538 4.26782 7.43044 4.91119 7.43044 5.69698C7.43044 6.48277 6.78538 7.12614 5.99753 7.12614Z"
+                                fill="black" />
+                        </svg>
+                        <h4>Địa chỉ nhận hàng</h4>
+                    </div>
+                </td>
+            </tr>
+            <tr class="them_dia_chi">
+                <td class="thong_tin" colspan="4">
+                    <div class="q">
+                        <p>Tên người nhận: <b>Thư Nguyễn</b> </p>
+                        <p class="sdt">SĐT: 0979245708</p>
+                    </div>
+                    <p>Địa chỉ:  20b, Vũ Trọng Khánh, Mộ Lao, Hà Đông, Hà Nội</p>
+                </td>
+                <td class="report-hover" colspan="2">
+                    <button id="report">
+                        Thay đổi địa chỉ nhận hàng
+                    </button>
+                </td>
+            </tr>
+            <tr class="don_vi_van_chuyen">
+                <td colspan="3">
+                    <div class="dvvc">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 11 12" fill="none">
+                            <path
+                                d="M8.75214 11.4018L5.90956 7.53082C5.70384 7.2493 5.29991 7.2493 5.09046 7.53082L2.24788 11.4018C1.59708 12.481 0 12 0 10.7254V2.50636C0 1.1222 1.07345 0 2.39749 0H8.60252C9.92656 0 11 1.1222 11 2.50636V10.7254C11 12 9.40294 12.4849 8.75214 11.4018Z"
+                                fill="black" />
+                        </svg>
+                        <h4>Đơn vị vận chuyển</h4>
+                    </div>
+                </td>
+                <td colspan="3" id="pttt">
+                    <div class="dvvc">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 11 12" fill="none">
+                            <path
+                                d="M8.75214 11.4018L5.90956 7.53082C5.70384 7.2493 5.29991 7.2493 5.09046 7.53082L2.24788 11.4018C1.59708 12.481 0 12 0 10.7254V2.50636C0 1.1222 1.07345 0 2.39749 0H8.60252C9.92656 0 11 1.1222 11 2.50636V10.7254C11 12 9.40294 12.4849 8.75214 11.4018Z"
+                                fill="black" />
+                        </svg>
+                        <h4>Phương thức thanh toán</h4>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="phuong_thuc">
+                <td class="opt" colspan="3">
+                    <div class="cod">
+                      
+                        <div class="shipment">
+                            <input checked="checked" name="van_chuyen" type="radio">COD 
+                        </div>
+                        <p class="time">Nhận hàng dự kiến vào 04/12/2023 - 05/12/2023 </p>
+                        
+                        <div class="shipment">
+                            <input name="van_chuyen" type="radio">Nhanh
+           
+                        </div>
+                        <p class="time">Nhận hàng dự kiến vào 01/12/2023 - 02/12/2023 <br> Lưu ý: Tiền vận chuyển phụ thuộc vào địa chỉ</p></p>
+            
+                    </div>
+                </td>
+                <td class="opt" colspan="3" id="pay">
+                    <div class="thanh_toan">
+                   
+                        <div class="shipment">
+                            <input checked="checked" name="thanh_toan" type="radio"> Thanh toán khi nhận hàng
+                  
+                        </div>
+                        <p class="chu_y">Bạn sẽ thanh toán sau khi nhận được hàng </p>
+            
+                        <div class="shipment">
+                            <input name="thanh_toan" type="radio"> Chuyển khoản qua ngân hàng
+   
+                        </div>
+                        <p class="chu_y">Quét mã QR để thanh toán sua khi đặt hàng <br> Lưu ý: Chụp ảnh giao dịch sau khi thanh toán </p>
+               
+                    </div>
+                </td>
+            </tr>
+            <tr class="total">
+                <th colspan="3" class="noi_dung">
+                    Tổng tiền hàng
+                    <br>
+                    Phí vận chuyện
+                    <br>
+                    <p id="ttt">Tổng thanh toán</p>
+                </th>
+                <td colspan="3" class="money">
+                    30.000Đ
+                    <br>
+                    30.000Đ
+                    <br>
+                    <p><b>60.000Đ</b></p>
+                </td>
+            </tr>
+
+            <tr class="dat_hang">
+                <td class="click-hover" colspan="6">
+                    <button class="click ">
+                        <p><b>ĐẶT HÀNG</b></p>
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="foot_left">
+            <p><strong>CATMART VIỆT NAM</strong></p>
+            <p><strong>Cửa hàng chính:</strong> 20B, KĐT Mỗ Lao, Hà Đông, Hà Nội</p>
+            <p> <strong>Cơ sở 2: </strong>48A, Ao Sen, Hà Đông, Hà Nội</p>
+            <p><strong>Điện thoại:</strong> 0988888888</p>
+            <p><strong>Email</strong> catmart@gmail.com</p>
+        </div>
+        <div class="policy">
+            <p><strong> CHÍNH SÁCH </strong></p>
+            <a href="/chinh_sach_doi_tra/index.html">Chính sách đổi trả</a>
+            <a href="/chinh_sach_bao_mat/index.html">Chính sách bảo mật</a>
+            <a href="/chinh_sach_giao_hang/index.html">Chính sách giao hàng</a>
+        </div>
+        <div class="ho_tro">
+            <p> <strong>HỖ TRỢ KHÁCH HÀNG</strong></p>
+            <a href="/huong_dan_mua_hang/index.html">Hướng dẫn mua hàng</a>
+            <a href="/huong_dan_thanh_toan/index.html">Hướng dẫn thanh toán</a>
+        </div>
+        <div class="foot_right">
+            <p><strong>KẾT NỐI VỚI CHÚNG TỐI</strong></p>
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="myModalLogin" class="modalLogin">
+        <div class="modalLogin_content">
+            <div class="login_content">
+                <span class="close">&times;</span>
+                <div class="login_left">
+                    <h1>Đăng nhập ngay</h1>
+                    <p>Mừng bạn quay trở lại 👋</p>
+                    <div class="google">
+                        <img src="Image/icons_google.png">
+                        <span>Đăng nhập với Google</span>
+                    </div>
+                    <div class="orReg">
+                        <div class="line"></div>
+                        <p>hoặc Đăng nhập với</p>
+                        <div class="line"></div>
+                    </div>
+                    <label for="userName">Email</label>
+                    <input type="email" id="userName" placeholder="Nhập tên tài khoản" autocomplete="off">
+                    <!-- <br> -->
+                    <label for="userPass">Password</label>
+                    <input type="password" id="userPass" placeholder="Nhập mật khẩu" autocomplete="off">
+                    <div class="quen_pass">
+                        <div class="remember">
+                            <input type="checkbox" id="ghi_nho">
+                            <label for="ghi_nho">Ghi nhớ đăng nhập</label>
+                        </div>
+                        <a>Quên mật khẩu?</a>
+                    </div>
+                    <button id="btnLogin">Đăng nhập</button>
+                    <p>Chưa có tài khoản? <span>Tạo tài khoản ngay</span> <a id="link_reg" href="#">Đăng ký</a> </p>
+                </div>
+                <div class="login_right">
+                    <img src="Image/login_img.png" alt="Login Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="myModaRegis" class="modalReg">
+        <div class="modalReg_content">
+            <div class="reg_content">
+                <span class="close2">&times;</span>
+                <h3>Catmart</h3>
+                <h2>Đăng ký tài khoản</h2>
+                <div class="row">
+                    <div class="row_box">
+                        <label for="ho">Họ</label>
+                        <input type="text" id="ho" name="ho" placeholder="Nhập họ của bạn" autocomplete="off">
+                    </div>
+                    <div class="row_box">
+                        <label for="ho">Tên</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập tên của bạn" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row_box">
+                        <label for="userName2">Email</label>
+                        <input type="email" id="userName2" placeholder="Nhập tên tài khoản" autocomplete="off">
+                    </div>
+                    <div class="row_box">
+                        <label for="userPass2">Password</label>
+                        <input type="password" id="userPass2" placeholder="Nhập mật khẩu" autocomplete="off">
+                    </div>
+                </div>
+                <div class="btnReg">
+                    <img src="Image/dangky 3.png">
+                    <button>Đăng ký</button>
+                </div>
+                <div class="orReg">
+                    <div class="line"></div>
+                    <p>hoặc Đăng nhập với</p>
+                    <div class="line"></div>
+                </div>
+                <img src="Image/Group 28.png">
+                <p id="chinh_sach">Bằng việc tiếp tục, bạn đã đọc và đồng ý với điều khoản sử dụng và Chính sách bảo mật
+                    thông tin cá
+                    nhân của CatMart </p>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

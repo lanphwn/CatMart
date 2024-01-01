@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Cat Mart</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+    <div class="head">
+    </div>
+    <div class="top_bar">
+        <div class="left">
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube" id="youtube">
+                </a>
+            </div>
+            <p>Chào mừng đến với CatMart!!!</p>
+        </div>
+        <div class="right">
+
+            <a href="#profile">
+                <img src="Image/icon_progile.png">
+            </a>
+            <div class="dropdown">
+                <a href="../tai_khoan_cua_toi/index.html">
+                    <button class="dropbtn">Nguyễn Minh Đức</button>
+                </a>
+                <div class="dropdown-content">
+                    <a id="profile" href="../tai_khoan_cua_toi/index.html">Hồ sơ của tôi</a>
+
+                    <a id="follow-orders" href="../don_hang_cua_toi/index.html">Theo dõi đơn hàng</a>
+                    <a id="logout" href="../Homepage/index.html">Đăng xuất</a>
+                </div>
+            </div>
+
+            <a href="#location">
+                <img src="Image/location.png">
+                Hệ thống cửa hàng
+            </a>
+        </div>
+    </div>
+    <div class="sticky_scroll">
+        <div class="header">
+            <img id="logo" src="Image/logo.png">
+            <div class="search">
+                <input type="text" class="tim_kiem" name="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
+                <button class="button_tim_kiem"> Tìm kiếm </button>
+            </div>
+            <div class="gio_hang">
+                <div class="gio_hang_img">
+                    <img src="Image/shopping bag.png">
+                    <p>0</p>
+                </div>
+                <p>Giỏ hàng</p>
+            </div>
+            <div class="lien_he">
+                <div class="sdt">
+                    <p id="phone_num">0988888888</p>
+                    <p id="hotline">HOTLINE ĐẶT HÀNG</p>
+                </div>
+                <img src="Image/phone.png">
+            </div>
+        </div>
+        <div class="nav_bar">
+            <ul class="dieu_huong">
+                <li>
+                    <a class="nav_text" href="../Homepage/index.html" id="home_page"> Trang chủ </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="../Sale/index.html"> Ưu đãi </a>
+                </li>
+                <li class="have-drop">
+                    <a class="nav_text active" href="../san_pham/index.html" id="product"> Sản phẩm </a>
+                    <div class="nav-drop-product">
+                        <div class="group-opt">
+                            <a href="../san_pham/thuc_an_kho.html">
+                                Thức ăn khô cho mèo
+                            </a>
+                            <a href="../san_pham/pate_nuoc_sot.html">
+                                Pate & nước sốt cho mèo
+                            </a>
+                            <a href="../san_pham/thuc_pham_cn.html">
+                                Thực phẩm chức năng cho mèo
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_text" href="../ve_chung_toi/index.html"> Về chúng tôi </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="#lienhe"> Liên hệ </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dieu_huong_ve_chung_toi">
+            <a href="../Homepage/index.html" style="color: rgb(109, 109, 109);">Trang chủ</a>
+            <div class="line"></div>
+            <a href="./index.html" id="current-page">Đơn hàng của tôi</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="content-header">
+            <a href="./index.html">
+                <h4 class="status all">Tất cả
+                    <div class="status-line"></div>
+                </h4>
+            </a>
+            <a href="./wait.html">
+                <h4 class="status wait">Chờ giao hàng
+                    <div class="status-line"></div>
+                </h4>
+            </a>
+            <a href="./paid.html">
+                <h4 class="status paid active">Thanh toán
+                    <div class="status-line"></div>
+                </h4>
+            </a>
+            <a href="./canceled.html">
+                <h4 class="status canceled">Đơn đã hủy
+                    <div class="status-line"></div>
+                </h4>
+            </a>
+            <a href="./return.html">
+                <h4 class="status return">Trả hàng/Hoàn tiền
+                    <div class="status-line"></div>
+                </h4>
+            </a>
+        </div>
+        <div class="orders">
+            <div class="order paid">
+                <div class="order-status">
+                    <div class="logo-link">
+                        <img src="./image/logo_small.png" alt="">
+                        <p><b>whiskas.shop.vn</b></p>
+                    </div>
+                    <div class="order-color" id="done">
+                        <div id="green"></div>
+                        <p>Đơn hàng đã được giao</p>
+                    </div>
+                </div>
+                <div class="order-info">
+                    <div class="order-title">
+                        <img src="./image/product_order.png" alt="">
+                        <div class="text">
+                            <p class="name-product">
+                                <b>
+                                    Thức ăn cho mèo loại lớn 85g vị cá thu
+                                </b>
+                            </p>
+                            <p>
+                                Số lượng: 1
+                            </p>
+                            <p>
+                                Đơn giá: 16.000Đ
+                            </p>
+                            <h3>Thành tiền:
+                                <b>
+                                    16.000Đ
+                            </h3>
+                            </b>
+                        </div>
+                    </div>
+                    <div class="group-btn-report">
+                        <button id="vote">ĐÁNH GIÁ</button>
+                        <button id="report">KHIẾU NẠI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="order paid">
+                <div class="order-status">
+                    <div class="logo-link">
+                        <img src="./image/logo_small.png" alt="">
+                        <p><b>whiskas.shop.vn</b></p>
+                    </div>
+                    <div class="order-color" id="done">
+                        <div id="green"></div>
+                        <p>Đơn hàng đã được giao</p>
+                    </div>
+                </div>
+                <div class="order-info">
+                    <div class="order-title">
+                        <img src="./image/product_order.png" alt="">
+                        <div class="text">
+                            <p class="name-product">
+                                <b>
+                                    Thức ăn cho mèo loại lớn 85g vị cá thu
+                                </b>
+                            </p>
+                            <p>
+                                Số lượng: 1
+                            </p>
+                            <p>
+                                Đơn giá: 16.000Đ
+                            </p>
+                            <h3>Thành tiền:
+                                <b>
+                                    16.000Đ
+                            </h3>
+                            </b>
+                        </div>
+                    </div>
+                    <div class="group-btn-report">
+                        <button id="vote">ĐÁNH GIÁ</button>
+                        <button id="report">KHIẾU NẠI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot_left">
+            <p><strong>CATMART VIỆT NAM</strong></p>
+            <p><strong>Cửa hàng chính:</strong> 20B, KĐT Mỗ Lao, Hà Đông, Hà Nội</p>
+            <p> <strong>Cơ sở 2: </strong>48A, Ao Sen, Hà Đông, Hà Nội</p>
+            <p><strong>Điện thoại:</strong> 0988888888</p>
+            <p><strong>Email</strong> catmart@gmail.com</p>
+        </div>
+        <div class="policy">
+            <p><strong> CHÍNH SÁCH </strong></p>
+            <a href="#Doi_tra">Chính sách đổi trả</a>
+            <a href="#Doi_tra">Chính sách bảo mật</a>
+            <a href="#Doi_tra">Chính sách giao hàng</a>
+        </div>
+        <div class="ho_tro">
+            <p> <strong>HỖ TRỢ KHÁCH HÀNG</strong></p>
+            <a href="#Doi_tra">Hướng dẫn mua hàng</a>
+            <a href="#Doi_tra">Hướng dẫn thanh toán</a>
+        </div>
+        <div class="foot_right">
+            <p><strong>KẾT NỐI VỚI CHÚNG TỐI</strong></p>
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

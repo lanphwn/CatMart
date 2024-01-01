@@ -1,0 +1,1620 @@
+body {
+    font-family: "Baloo Bhaina 2";
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.head {
+    height: 20vh;
+    background-image: url("Image/Head.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top_bar {
+    background-color: #D35E31;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0px 11vw;
+    position: relative;
+    z-index: 9999999;
+}
+
+
+.top_bar .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 10px
+}
+
+.top_bar .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+}
+
+.left img {
+    width: 16px;
+    height: 16px;
+}
+
+
+.image_nav {
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#youtube {
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
+}
+
+.top_bar .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right img {
+    width: 14px;
+    height: 14px;
+    object-fit: scale-down;
+    padding: 0 5px 5px 50px
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #D35E31;
+    color: #FFF;
+    font-family: "Baloo Bhaina 2";
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown:hover {
+    background-color: #D35E31;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    left: -30px;
+    display: none;
+    position: absolute;
+    border-radius: 2px;
+    background: #FEFEFE;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    width: 11vw;
+    height: fit-content;
+
+    /* width: 130px;
+    height: 85px; */
+    
+}
+.dropdown-content a
+{
+    background-color: white;
+    color: #CE3800;
+    border: #D35E31 solid 1px;
+}
+#profile, #follow-orders, #logout
+{
+    color: #CE3800;
+}
+.dropdown-content a:hover
+{
+    background-color: #ddd;
+}
+
+/* Modal Box ở đoạn này */
+
+.modalLogin {
+    display: none;
+    background-color: #000;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalLogin_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    height: 550px;
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+.login_content .orReg {
+    padding: 0 10%;
+}
+
+.login_left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.login_left h1 {
+    padding: 0;
+    padding-top: 7%;
+    margin: 0;
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1;
+}
+
+.login_left p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.google {
+    border-radius: 5px;
+    background: #DADADA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#userName,
+#userPass {
+    border-radius: 5px;
+    background: #DADADA;
+    gap: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+    padding-left: 15px;
+    font-family: "Baloo Bhaina 2";
+    margin-bottom: 10px;
+    /* font-weight: bold; */
+}
+
+#btnLogin {
+    border-radius: 5px;
+    background: #D35E31;
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding-left: 15px;
+    font-family: "Baloo Bhaina 2";
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+.quen_pass {
+    display: flex;
+    justify-content: space-between;
+    width: 104%;
+}
+
+.quen_pass a {
+    color: #474BCA;
+    font-family: "Baloo Bhaina 2";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* #ghi_nho_label {
+    font-family: "Baloo Bhaina 2";
+    font-size: 14px;
+    font-weight: 500;
+} */
+
+.remember label {
+    font-family: "Baloo Bhaina 2";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.google img {
+    width: 16px;
+    height: 16px;
+}
+
+.google span {
+    font-size: 14px;
+    /* font-weight: 500; */
+    color: #4E4E4E;
+}
+
+
+.login_left p:last-child {
+    padding: 0 15%;
+}
+
+.login_right {
+    width: 55%;
+    height: 100%;
+    background-color: #FEDCD2;
+    padding: 0;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.login_right img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.login_left a {
+    color: #474BCA;
+}
+
+/* The Close Button */
+.close {
+    display: flex;
+    justify-content: center;
+    line-height: 49px;
+    text-align: center;
+    color: #aaa;
+    float: right;
+    font-size: 40px;
+    font-weight: normal;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background-color: #FFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.right a {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_bar p {
+    padding: 0;
+    padding-left: 6px;
+    font-size: 16px;
+    color: #FFF;
+    margin: 0;
+
+}
+
+.top_bar a {
+    text-decoration: none;
+    color: #FFF;
+    padding-left: 5px;
+}
+
+
+
+.sticky_scroll {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+.vi_tri {
+    margin: 0;
+    width: 100vw;
+    height: 3px;
+    display: flex;
+    justify-content: center;
+    height: 3px;
+
+}
+
+#home_page {
+    border-bottom: 3px solid #AC3C12;
+    /* border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; */
+}
+
+.header {
+    display: flex;
+    background-color: #FEDCD2;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20vw;
+}
+
+.header #logo {
+    display: inline;
+    height: 78px;
+    width: 98px;
+    padding: 5px 0px;
+}
+
+.search {
+    display: flex;
+    /* width: 1000px; */
+    height: 32px;
+    align-items: center;
+    /* flex-shrink: 2; */
+}
+
+.search .tim_kiem {
+    display: inline;
+    width: 27vw;
+    height: 30px;
+    align-items: center;
+    border: none;
+    padding-left: 10px;
+    flex-shrink: 0;
+    border-radius: 2px 0px 0px 2px;
+}
+
+/* input::placeholder{
+    padding-left: 5px;
+} */
+
+.search .button_tim_kiem {
+    padding: 0px 20px;
+    /* width: 5vw; */
+    height: 32px;
+    background-color: #DE744C;
+    position: relative;
+    border: none;
+    color: #FAFAFA;
+    margin-right: 10px;
+    border-radius: 0px 2px 2px 0px;
+
+}
+
+.gio_hang {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #CE3800;
+    padding-top: 18px;
+}
+
+.gio_hang img {
+    height: 24px;
+    width: 22px;
+}
+
+.gio_hang_img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gio_hang_img p {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    line-height: 27px;
+    right: -15px;
+    top: -15px;
+    background-color: #FF8B5F;
+    color: #FFF;
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+
+.gio_hang p {
+    /* height: 24px;
+    width: 22px; */
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.lien_he {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CE3800;
+}
+
+.lien_he img {
+    height: 29px;
+    width: 29px;
+}
+
+.lien_he p {
+    gap: 1px;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+#phone_num {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#hotline {
+    font-size: 12px;
+}
+
+.sdt {
+    padding-right: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dieu_huong {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+    list-style: none;
+    margin: 0;
+    border-bottom: 3px solid #EAEAEA;
+}
+
+.dieu_huong li {
+    list-style: none;
+    padding: 0 30px;
+}
+
+/* .dieu_huong li:hover {
+    transform: translateY(-0.15em);
+    background-color: rgba(0, 0, 0, 0.10);
+	display: inline-block;
+	transition-duration: .3s;
+	transition-property: transform;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+}
+} */
+
+.nav_bar a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #AC3C12;
+}
+
+.dieu_huong_ve_chung_toi{
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid #ebebeb;
+    padding: 0 0;
+    margin: 0 ;
+    line-height: 1.65;
+    background-color: white;
+}
+
+.dieu_huong_ve_chung_toi .line{
+    margin: 0 8px;
+    width: 1px;
+    height: 12px;
+    background-color: #000;
+}
+.dieu_huong_ve_chung_toi a{
+    padding: 10px 0 5px 0;
+    margin: 0 ;
+    text-decoration: none;
+    color: #A1A1A1;
+    /* line-height: 16px; */
+}
+#current-page
+{
+    color: #000;
+}
+.dieu_huong_ve_chung_toi a:first-child {
+    margin-left: 20.8%;
+}
+/* -------------------------DROPDOWN PRODUCT---------------------- */
+
+.nav-drop-product
+{
+    position: absolute;
+    display: none;
+    font-size: 16px;
+    margin-left: -10px;
+}
+.nav-drop-product .group-opt
+{
+    display: flex;
+    flex-direction: column; 
+}
+.group-opt a
+{
+    text-decoration: none;
+    background-color: #FFAA7F;
+    color: white;
+    padding-inline: 10px;
+    border-bottom: white solid 1px;
+}
+.group-opt a:hover
+{
+    background-color: #e39770;
+    color: rgb(231, 230, 230);
+}
+/* -------------------------DROPDOWN PRODUCT---------------------- */
+
+
+/* -------------------------CONTENT---------------------- */
+.main-content
+{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-family: "Baloo Bhaina 2";
+    padding-bottom: 72px;
+    /* height: 1500px; */
+}
+.content-header
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* border: #000 solid; */
+    justify-content: center;
+    gap: 74px;
+    padding-top: 40px;
+    padding-bottom: 72px;
+    border-bottom: #ddd solid 1px;
+}
+.group-pic
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.group-pic .main-pic
+{
+
+}
+.info-product
+{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    line-height: 55px;
+
+}
+.info-product p
+{
+    color: #820000;
+    font-weight: 500;
+    margin: 0;
+}
+.logo-brand
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-brand img{
+    width: 20px;
+    height: 20px;
+}
+.sl
+{
+    display: flex;
+    gap: 16px;
+}
+.sl input
+{
+    width: 100px;
+    height: 39px;
+    font-size: 32px;
+    font-family: "Baloo Bhaina 2";
+    color: #820000;
+    text-align: center;
+
+}
+.rate{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rate .stars
+{
+    height: 40px;
+}
+.rate img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.rate p
+{
+    font-size: 16px;
+    color: #000;
+}
+.grp-btn
+{
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+#gradient
+{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Baloo Bhaina 2";
+    line-height: 2.2;
+    color: white;
+    border: none;
+    border-radius: 17px;
+    background-image: linear-gradient(to right,#CE3800, #FF5100);
+    width: 90%;
+    height: 81px;
+    transition: all 0.2s ease;
+}
+#gradient:hover
+{
+    background-image: linear-gradient(to right,#CE3800, #CE3800);
+}
+#add-to-cart
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight:600;
+    font-family: "Baloo Bhaina 2";
+    width: 50%;
+    height: 81px;
+    color: white;
+    border: none;
+    border-radius: 17px;
+    background-image: linear-gradient(to right,#DE744C, #FD834A);
+    transition: all 0.2s ease;
+}
+#add-to-cart:hover
+{
+    background-image: linear-gradient(to right,#c26543, #eb7944);
+}
+#root {
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+    font-size: 36px;
+    color: #ddd;
+}
+#root::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: #ddd 1px solid; 
+    z-index: -1;
+}
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+}
+.details-product
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.details-title
+{
+    width: 100%;
+    border-bottom: #ddd solid 1px;
+    color: #CE3800;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 30px;
+
+}
+.grp-details-btn
+{
+    font-size: 20px;
+    display: flex;
+    margin-left: 13%;
+}
+.grp-details-btn .des-btn
+{
+    border-inline: #ddd solid 1px;
+    border-top: #ddd solid 1px;
+    width: 10%;
+    height: 10%;
+    margin: 0;
+    color: #ddd;
+}
+.grp-details-btn .des-btn.active
+{
+    border-top: #FF8A00 solid 2px;
+    color: #CE3800;
+}
+.text.review
+{
+    display: flex;
+    flex-direction: column;
+    /* padding-inline: 13%; */
+    width: 100%;
+    gap: 30px;
+    border-bottom: #ddd solid 1px;    
+    padding-top: 32px;
+    padding-bottom: 1px;
+}
+.text.des
+{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 13%;
+    width: 100%;
+    gap: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: #ddd solid 1px;
+}
+.description, .benefit, .instruct
+{
+    margin-left: 13%;
+    margin-right: 6%;
+}
+.text.des p, .text.review p
+{
+    font-size: 24px;
+    font-weight: 400;
+}
+.review-box
+{
+    margin-left: 13%;
+}
+.review-title
+{
+
+    font-size: 36px;
+    font-weight: 500;
+}
+.review
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.user-name{
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 20px;
+}
+.user-name img{
+    width: 180px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+#ava
+{
+    width: 49px;
+    height: 49px;
+}
+.review .user-name p{
+    font-size: 24px;
+    font-weight: 600;
+}
+.review-text
+{
+    font-size: 24px;
+    margin-left: 70px;
+}
+.des-title
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.description p, .benefit p, .instruct p
+{
+    margin: 0;
+    line-height: 1.4;
+}
+.more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    gap: 12px;
+    cursor: pointer;
+}
+.add-review
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 39px;
+
+    padding-bottom: 32px;
+    border-bottom: #ddd solid 1px;
+}
+.box{
+    margin-inline: 13%;
+    display: flex;
+    flex-direction: column;
+}
+.comment-title
+{
+    display: flex;
+    width: 100%;
+    gap: 37px;
+    /* justify-content: left; */
+
+}
+#comment
+{
+    font-weight: 500;
+    font-size: 32px;
+    color: #CE3800;
+    line-height: 0.5;
+}
+.comment-title img
+{
+    width: 323px;
+    height: 63px;
+    object-fit: cover;
+
+}
+.add-review input{
+    /* color: #ddd; */
+    border: #ddd solid 1px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 500;
+    height: 155px;
+    padding: 40px;
+    padding-top: 0;
+    text-align: left;
+    outline: none;
+    font-family: "Baloo Bhaina 2";
+    margin: 0;
+    line-height: 1;
+}
+.add-img
+{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.add-img p{
+    font-size: 24px;
+    font-weight: 500;
+    color: #DE744C;
+}
+.add-img button
+{
+    font-family: "Baloo Bhaina 2";
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: #DE744C solid 1px;
+    width: 158px;
+    height: 40px;
+    background-color: white;
+    color: #AC3C12;
+}
+.add-img input
+{
+    display: none;
+}
+.submit{
+    width: 270px;
+    height: 80px;
+    color: white;
+    border-radius: 10px;
+    background-color: #DE744C;
+    text-align: center;
+    font-family: "Baloo Bhaina 2";
+    font-size: 36px;
+    font-weight: 600;
+    align-self: center;
+    line-height: 2.5;
+    border: none;
+}
+.submit:hover
+{
+    background-color: #bc6241;
+}
+#orther
+{
+    font-size: 36px;
+    border: none;
+}
+.orther-product
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.row-item
+{
+    width: 80%;
+    display: flex;
+    padding-top: 3%;
+    justify-content: space-between;
+    padding-inline: 87px;
+    gap: 40px;
+    /* border: #000 solid; */
+}
+.item-img
+{
+    text-align: center;
+    padding: 10px;
+}
+.item-img img
+{
+    width: 90%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #DE744C solid 1px;
+    border-radius: 14px;
+    width: 80%;
+}
+.item .item-title
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 25px;
+
+}
+.item-title a
+{
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.item-title .item-cost
+{
+    color: #DE744C;
+    font-size: 24px;
+    font-weight: bold;
+}
+.item-title .item-root-cost
+{
+    font-size: 20px;
+    color: #ddd;
+}
+.item-root-cost {
+    position: relative;
+    text-decoration: none;
+}
+
+.item-root-cost::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: #ddd 1px solid; 
+}
+.item-title .rate
+{
+    /* width: 100%; */
+    text-align: center;
+    padding-bottom: 10px;
+}
+.item-title .rate img
+{
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+}
+button
+{
+    cursor: pointer;
+}
+.buy-btn
+{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 15px;
+    width: 100%;
+    justify-content: center;
+}
+#gradient-1
+{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Baloo Bhaina 2";
+    line-height: 1.6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#FA4478, #FD834A);
+    width: 60%;
+    height: 32px;
+    transition: all 0.2s ease;
+}
+#gradient-1:hover
+{
+    background-image: linear-gradient(to right,#cf1348, #cf1348);
+}
+#add-to-cart-1
+{
+    width: 15%;
+    height: 32px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#FA4478, #FD834A);
+}
+#add-to-cart-1:hover
+{
+    background-image: linear-gradient(to right,#cf1348, #cf1348);
+}
+
+
+
+
+
+.toggle
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    border-radius: 20px;
+}
+.overlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.report-popup
+{
+    width: 58vw;
+    /* height: fit-content; */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    color: #CE3800;
+    /* border: #000 solid; */
+}
+.report-title
+{
+    color: #CE3800;
+    font-size: 48px;
+    font-weight: bold;
+}
+.type-report{
+    display: flex;
+    gap: 60px;
+    border-bottom: #ddd solid 1px;
+    border-top: #ddd solid 1px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.type-report p
+{
+    font-size: 2rem;
+    margin-right: 5%;
+}
+.type-report select
+{
+    color: #DE744C;
+    border-radius: 20px;
+    border: #DE744C solid 1px;
+    font-size: 24px;
+    text-align: center;
+    height: 40%;
+    width: 30%;
+    font-family: "Baloo Bhaina 2";
+    /* padding-inline: 10px; */
+}
+.detail-report
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* justify-content: center; */
+    border-top: #ddd solid 1px;
+    border-bottom: #ddd solid 1px;
+}
+.detail-text{
+    display: flex;
+    flex-direction: column;
+    line-height: 1px;
+    width: 100%;
+    height: 100%;
+    margin-left: 2%;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+.detail-text p, .detail-img p{
+    font-size: 1.5rem;
+    text-align: left;
+}
+.detail-img p
+{
+    text-align: left;
+}
+.detail-text textarea
+{
+    border:#ddd solid 1px ;
+    border-radius: 12px;
+    height: 65%;
+    width: 90%;
+    line-height: normal;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+.detail-img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 10px;
+    line-height: 1px;
+}
+.detail-img input
+{
+    display: none;
+    
+}
+.detail-img button
+{
+    border-radius: 20px;
+    width: 40%;
+    height: 15%;
+    color: #AC3C12;
+    border: #DE744C solid 1px;
+    background-color: white;
+    font-family: "Baloo Bhaina 2";
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.detail-report .line
+{
+    height: 100%;
+    margin: 0;
+}
+.submit-report
+{
+    background-color: #F85C5C;
+    border-radius: 12px;
+    color: white;
+    width: 30%;
+    height: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Baloo Bhaina 2";
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* -------------------------END CONTENT---------------------- */
+
+.banner img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 0;
+}
+
+h1:hover {
+    color: #AC3C12;
+    cursor: pointer;
+}
+
+.best_pro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+.pro1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 21px;
+}
+
+.pro_img {
+    width: 14vw;
+    height: 14vw;
+    object-fit: cover;
+    margin: 0;
+    box-shadow: 0px 4px 10.600000381469727px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    /* filter: drop-shadow(0px 4px 10.600000381469727px rgba(0, 0, 0, 0.25)); */
+}
+
+.pro_name {
+    margin: 0;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.pro_price {
+    margin: 0;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.star {
+    display: flex;
+}
+
+.star img {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    padding: 0 2px;
+}
+
+.vote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vote p {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.line {
+    width: 1px;
+    height: 360px;
+    background: #D9D9D9;
+}
+
+.phan_phoi {
+    justify-content: space-between;
+    display: flex;
+    height: 50vh;
+}
+
+.phan_phoi img {
+    width: 24vw;
+    height: 24vw;
+    object-fit: cover;
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vh;
+}
+
+.review_pro {
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+.rv_img {
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+    margin: 0;
+    box-shadow: 0px 4px 10.600000381469727px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.rv_name {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.rv_content {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cta_cat {
+    margin-top: 5vh;
+    background: #FEDCD2;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: auto;
+}
+
+.cta_cat img {
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+    object-position: top;
+    /* position: absolute;
+    bottom: 0;
+    left: 25vw; */
+}
+
+.cta_cat .slogan {
+    padding: 0 5vw;
+}
+
+.cta_cat .tim_kiem {
+    display: inline;
+    width: 20vw;
+    height: 32px;
+    align-items: center;
+    border: none;
+    padding-left: 20px;
+}
+
+.slogan p {
+    margin: 0;
+    color: #FF983B;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.slogan::first-line {
+    margin: 0;
+    color: #FF764C;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.cta_cat .button_tim_kiem {
+    padding: 0px 20px;
+    height: 32px;
+    background-color: #DE744C;
+    position: relative;
+    border: none;
+    color: #FAFAFA;
+    margin-right: 10px;
+}
+
+.cam_ket {
+    background-color: #FFF;
+    display: flex;
+    width: 100vw;
+    height: 12vh;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.cam_ket1 img {
+    display: flex;
+    object-fit: contain;
+    padding: 0 10px;
+}
+
+.cam_ket1 {
+    display: flex;
+    padding: 0 3vw;
+}
+
+.cam_ket1 p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.cam_ket_content::first-line {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #303030;
+    padding: 2vw 10vw;
+    /* width: 100vw; */
+}
+
+.footer p {
+    margin: 0;
+}
+
+.foot_left p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+}
+
+.foot_left p:first-child {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.policy {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.policy a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.ho_tro {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.ho_tro a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.foot_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #FFF;
+}
+
+.foot_right .image_nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: normal;
+}
+
+.foot_right .image_nav a {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.foot_right .image_nav a:first-child {
+    width: 13.5px;
+    height: 13.5px;
+    object-fit: cover;
+    padding-right: 20px;
+}
+
+.foot_right .image_nav a:last-child {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    padding: 0 20px;
+}

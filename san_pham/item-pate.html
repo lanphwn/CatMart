@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Cat Mart</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style-details.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+    <div class="head">
+    </div>
+    <div class="top_bar">
+        <div class="left">
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube" id="youtube">
+                </a>
+            </div>
+            <p>Chào mừng đến với CatMart!!!</p>
+        </div>
+        <div class="right">
+
+            <a href="#profile">
+                <img src="Image/icon_progile.png">
+            </a>
+            <div class="dropdown">
+                <a href="../tai_khoan_cua_toi/index.html">
+                    <button class="dropbtn">Nguyễn Minh Đức</button>
+                </a>
+                <div class="dropdown-content">
+                    <a id="profile" href="../tai_khoan_cua_toi/index.html">Hồ sơ của tôi</a>
+
+                    <a id="follow-orders" href="../don_hang_cua_toi/index.html">Theo dõi đơn hàng</a>
+                    <a id="logout" href="../Homepage/index.html">Đăng xuất</a>
+                </div>
+            </div>
+
+            <a href="#location">
+                <img src="Image/location.png">
+                Hệ thống cửa hàng
+            </a>
+        </div>
+    </div>
+    <div class="sticky_scroll">
+        <div class="header">
+            <img id="logo" src="Image/logo.png">
+            <div class="search">
+                <input type="text" class="tim_kiem" name="tim_kiem" placeholder="Bạn đang tìm kiếm sản phẩm nào">
+                <button class="button_tim_kiem"> Tìm kiếm </button>
+            </div>
+            <div class="gio_hang">
+                <div class="gio_hang_img">
+                    <img src="Image/shopping bag.png">
+                    <p>0</p>
+                </div>
+                <p>Giỏ hàng</p>
+            </div>
+            <div class="lien_he">
+                <div class="sdt">
+                    <p id="phone_num">0988888888</p>
+                    <p id="hotline">HOTLINE ĐẶT HÀNG</p>
+                </div>
+                <img src="Image/phone.png">
+            </div>
+        </div>
+        <div class="nav_bar">
+            <ul class="dieu_huong">
+                <li>
+                    <a class="nav_text" href="../Homepage/index.html" id="home_page"> Trang chủ </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="../Sale/index.html"> Ưu đãi </a>
+                </li>
+                <li class="have-drop">
+                    <a class="nav_text" href="../san_pham/index.html" id="product"> Sản phẩm </a>
+                    <div class="nav-drop-product">
+                        <div class="group-opt">
+                            <a href="../san_pham/thuc_an_kho.html">
+                                Thức ăn khô cho mèo
+                            </a>
+                            <a href="../san_pham/pate_nuoc_sot.html">
+                                Pate & nước sốt cho mèo
+                            </a>
+                            <a href="../san_pham/thuc_pham_cn.html">
+                                Thực phẩm chức năng cho mèo
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_text" href="../ve_chung_toi/index.html"> Về chúng tôi </a>
+                </li>
+                <li>
+                    <a class="nav_text" href="#lienhe"> Liên hệ </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dieu_huong_ve_chung_toi">
+            <a href="../Homepage/index.html" style="color: rgb(109, 109, 109);">Trang chủ</a>
+            <div class="line"></div>
+            <a href="../san_pham/index.html">Sản phẩm</a>
+            <div class="line"></div>
+            <a href="./item-takho.html" id="current-page">Thức ăn cho mèo Anh ROYAL CANIN</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="content-header">
+            <div class="group-pic">
+                <div class="main-pic">
+                    <img src="./image/pate-main.png" alt="">
+                </div>
+                <div class="orther-pic">
+                    <img src="./image/pate-1.png" alt="">
+                    <img src="./image/pate-2.png" alt="">
+                    <img src="./image/pate-3.png" alt="">
+                    <img src="./image/pate-4.png" alt="">
+                </div>
+            </div>
+            <div class="info-product">
+                <p style=" color: #000;font-size: 40px;">Pate cho mèo vị nước sốt cá ngừ WHISKAS</p>
+                <div class="logo-brand">
+                    <img src="./image/logo-royal.png" alt="">
+                    <p style="font-size: 16px;">whiskas.com</p>
+                </div>
+                <p style="font-size: 32px;">Đơn giá</p>
+                <p id="cost" style="color: #CE3800; font-size: 70px; margin-top: 15px; margin-bottom: -10px;">25.000Đ
+                </p>
+                <p id="root">35,000đ</p>
+                <div class="sl">
+                    <p style="color: #820000; font-size: 28px;font-weight: 500;">Số lượng</p>
+                    <input type="number" value="1">
+                </div>
+                <p style="font-size: 25px;">Mã hàng: T6-1943</p>
+                <p style=" font-size: 20px;">Đánh giá (5.0/5.0)</p>
+                <div class="rate">
+                    <div class="stars">
+                        <img src="./image/Star 6.png" alt="">
+                        <img src="./image/Star 6.png" alt="">
+                        <img src="./image/Star 6.png" alt="">
+                        <img src="./image/Star 6.png" alt="">
+                        <img src="./image/Star 6.png" alt="">
+                    </div>
+                    <p>(100 đánh giá của khách hàng)</p>
+                </div>
+                <div class="grp-btn">
+                    <button id="gradient">MUA NGAY</button>
+                    <button id="add-to-cart"><img src="./image/shopping bag_.png" alt="">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+        <div class="details-product">
+            <div class="details-title">
+                CHI TIẾT SẢN PHẨM
+                <div class="grp-details-btn">
+                    <a class="des-btn active" href="./item-pate.html">MÔ TẢ</a>
+                    <a class="des-btn" href="./item-pate-dg.html">ĐÁNH GIÁ</a>
+                </div>
+            </div>
+            <div class="text des">
+                <div class="description">
+                    <p class="des-title" style="font-size: 36px; font-weight: 500;">Mô tả</p>
+                    <p><span style="text-decoration: underline;" >Pate cho mèo vị nước sốt cá ngừ WHISKAS Tuna Flavour Saucevới nhiều hương vị thơm ngon đặc trưng dành riêng cho mèo. Thực phẩm có tác dụng cân bằng dinh dưỡng hàng ngày, lựa chọn những thành phần thịt – cá tươi ngon nhất trong chế biến, giàu protein, các vitamin & khoáng chất thiết yếu và không có chất bảo quản.</span></p>
+                </div>
+                <div class="benefit">
+                    <p class="des-title" style="font-size: 36px; font-weight: 500;">Lợi ích chính</p>
+                    <p>
+                        Cung cấp đầy đủ dinh dưỡng cho mèo cưng. Giúp ăn ngon miệng hơn. Đảm bảo cung cấp năng lượng cho thú cưng hoạt động cả ngày. Chăm sóc lông và da khỏe mạnh. Hỗ trợ và kích thích tiêu hóa.
+                        <br>
+                        <br>
+                        Pate cho mèo vị nước sốt cá ngừ WHISKAS Tuna Flavour Sauce hương vị cá ngừ bao gồm nhiều thành phần dinh dưỡng. Bao gồm cá ngừ, thịt gà chọn lọc, dầu thực vật. Các vitamin thiết yếu và khoáng chất cung cấp đầy đủ các chất đạm thô, chất béo, chất xơ… Chất kết dính, hương liệu. Tất cả các Vitamin và khoáng chất thiết yếu.
+                    </p>
+                </div>
+                <div class="instruct">
+                    <p class="des-title" style="font-size: 36px; font-weight: 500;">Huớng dẫn sử dụng</p>
+                    <p>Sản phẩm có thể cho mèo ăn ngay hoặc trộn với cơm hoặc hạt thức ăn khô. Sự lựa chọn dành cho các em mèo biếng ăn. Hướng dẫn sử dụng: sử dụng ngay sau khi bóc vỏ. Trong trường hợp còn thừa cần phải bảo quản trong tủ lạnh không quá 3 ngày. Nên hâm ấm trước khi sử dụng.</p>
+                </div>
+            </div>
+        </div>
+        <div class="orther-product">
+            <div class="details-title" id="orther">
+                CÁC SẢN PHẨM TƯƠNG TỰ
+            </div>
+            <div class="row-item">
+                <div class="item" id="thuc-an-kho">
+                    <div class="item-img">
+                        <a href="./item-takho.html">
+                            <img src="./image/item1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-takho.html">
+                            Thức ăn khô ROYAL CANIN
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">145,000đ</div>
+                        <div class="item-root-cost">195,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="item" id="thuc-an-pate">
+                    <div class="item-img">
+                        <a href="./item-pate.html">
+                            <img src="./image/item2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-pate.html">
+                            Pate sốt cá ngừ WHISKAS
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">25,000đ</div>
+                        <div class="item-root-cost">35,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="item" id="khac">
+                    <div class="item-img">
+                        <a href="./item-khac.html">
+                            <img src="./image/item3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-khac.html">
+                            Gel dinh dưỡng GIMCAT
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">190,000đ</div>
+                        <div class="item-root-cost">250,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="item" id="thuc-an-pate">
+                    <div class="item-img">
+                        <a href="./item-pate.html">
+                            <img src="./image/item2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-pate.html">
+                            Pate sốt cá ngừ WHISKAS
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">25,000đ</div>
+                        <div class="item-root-cost">35,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row-item">
+                <div class="item" id="thuc-an-kho">
+                    <div class="item-img">
+                        <a href="./item-takho.html">
+                            <img src="./image/item1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-takho.html">
+                            Thức ăn khô ROYAL CANIN
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">145,000đ</div>
+                        <div class="item-root-cost">195,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="item" id="thuc-an-pate">
+                    <div class="item-img">
+                        <a href="./item-pate.html">
+                            <img src="./image/item2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-pate.html">
+                            Pate sốt cá ngừ WHISKAS
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">25,000đ</div>
+                        <div class="item-root-cost">35,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="item" id="khac">
+                    <div class="item-img">
+                        <a href="./item-khac.html">
+                            <img src="./image/item3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-khac.html">
+                            Gel dinh dưỡng GIMCAT
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">190,000đ</div>
+                        <div class="item-root-cost">250,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="item" id="thuc-an-pate">
+                    <div class="item-img">
+                        <a href="./item-pate.html">
+                            <img src="./image/item2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item-title">
+                        <a href="./item-pate.html">
+                            Pate sốt cá ngừ WHISKAS
+                        </a>
+                        <div class="rate">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                            <img src="./image/Star 6.png" alt="">
+                        </div>
+                        <div class="item-cost">25,000đ</div>
+                        <div class="item-root-cost">35,000đ</div>
+                    </div>
+                    <div class="buy-btn">
+                        <button id="gradient-1">MUA NGAY</button>
+                        <button id="add-to-cart-1"><img src="./image/shopping bag_.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toggle">
+            <div class="report-popup">
+                <div class="report-title">
+                    KHIẾU NẠI
+                </div>
+                <div class="type-report">
+                    <p>Đề mục khiếu nại</p>
+                    <select name="report-type" id="report-opt">
+                        <option value="gh">Giao hàng</option>
+                        <option value="vd">Dịch vụ</option>
+                        <option value="sp">Sản phẩm</option>
+                    </select>
+                </div>
+                <div class="detail-report">
+                    <div class="detail-text">
+                        <p>Chi tiết khiếu nại</p>
+                        <textarea name="" id="" cols="" rows=""></textarea>
+                    </div>
+                    <div class="line"></div>
+                    <div class="detail-img">
+                        <p>Ảnh đính kèm</p>
+                        <button class="choose-file">Chọn ảnh</button>
+                        <input type="file" name="" id="choose-file-true">
+                    </div>
+                </div>
+                <button class="submit-report">KHIẾU NẠI</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="footer">
+        <div class="foot_left">
+            <p><strong>CATMART VIỆT NAM</strong></p>
+            <p><strong>Cửa hàng chính:</strong> 20B, KĐT Mỗ Lao, Hà Đông, Hà Nội</p>
+            <p> <strong>Cơ sở 2: </strong>48A, Ao Sen, Hà Đông, Hà Nội</p>
+            <p><strong>Điện thoại:</strong> 0988888888</p>
+            <p><strong>Email</strong> catmart@gmail.com</p>
+        </div>
+        <div class="policy">
+            <p><strong> CHÍNH SÁCH </strong></p>
+            <a href="#Doi_tra">Chính sách đổi trả</a>
+            <a href="#Doi_tra">Chính sách bảo mật</a>
+            <a href="#Doi_tra">Chính sách giao hàng</a>
+        </div>
+        <div class="ho_tro">
+            <p> <strong>HỖ TRỢ KHÁCH HÀNG</strong></p>
+            <a href="#Doi_tra">Hướng dẫn mua hàng</a>
+            <a href="#Doi_tra">Hướng dẫn thanh toán</a>
+        </div>
+        <div class="foot_right">
+            <p><strong>KẾT NỐI VỚI CHÚNG TỐI</strong></p>
+            <div class="image_nav">
+                <a href="#facebook">
+                    <img src="Image/facebook-f.svg" alt="Facebook">
+                </a>
+                <a href="#instar">
+                    <img src="Image/instagram.svg" alt="Instargram">
+                </a>
+                <a href="#youtube">
+                    <img src="Image/youtube.svg" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
